@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <app-navbar></app-navbar>
+  <app-second-navbar></app-second-navbar>
+
+  <div class="container-fluid" id="second">
+
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="lds-facebook" *ngIf="showLoadingIndicator">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,65 @@
+.navbar{
+    margin-top:20px;
+}
+.container {
+    position:relative;
+    bottom:0;
+    width:100%;
+    
+}
+.row{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: center;
+}
+a{
+    font-size: 16px;
+}
+.col-lg{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+   width:50%;
+   padding:0px 250px;
+}
+.navbar-text{
+    color:white;
+}
+.insta:hover{
+color:#833ab4;
+}
+.facebook:hover{
+    color: #4267B2;
+}
+.twitter:hover{
+    color:#1DA1F2;
+}
+.gitHub:hover{
+    color: #b8c3cf;
+}
+.email:hover{
+    color:#405de6;
+}
+.email{
+    font-size:16px;
+    margin-left:5px;
+}
+
+.linkedIn:hover{
+    color: #2867B2;
+}
+@media screen and (max-width:720px){
+    .col-lg{
+        width: auto;
+        text-align: center;
+        padding:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .col-lg a{
+        margin-left:auto 50%;
+    }
+}

@@ -1,0 +1,180 @@
+{
+  "products": [
+    {
+      "name": "Acoustic Guitars",
+      "type": "Acoustic Guitars",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636711421948170000/91b5687d/64546383/washburn-heritage-hg26sce-o-u.jpg",
+      "url": "guitars"
+    },
+    {
+      "name": "EPIPHONE SG Prophecy Red Tiger Aged",
+      "type": "Electric Guitars",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636707055191800000/c9121eb8/64288870/vintage-v6-bb.jpg",
+      "url": "electricGuitars"
+    },
+    {
+      "name": "Yamaha YC61",
+      "type": "Keyboards",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636893700227270000/98e385e9/64615472/kurzweil-kp300-x.jpg"
+    },
+    {
+      "name": "CASIO AP-270BKC7",
+      "type": "Electric Pianos",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637394271705870000/353ca935/64794323/sencor-sdp-40.jpg"
+    },
+    {
+      "name": "Harley Benton HBV 870BK 4/4",
+      "type": "Electric Violons",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637231924600000000/35345850/64741949/soundsation-e-master.jpg"
+    },
+    {
+      "name": "Yamaha V7 SG 44",
+      "type": "Clasic Violons",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636710558723000000/d99ae70e/64456113/soundsation-vsvi-18.jpg"
+    }
+  ],
+  "guitars": [
+    {
+      "name": "Fender CD-60SCE Dreadnought",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636709867124070000/a04fb2d4/64395453/fender-cd-60sce-wn-nat.jpg",
+      "value": 250,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 1
+    },
+    {
+      "name": "MARTIN OME Cherry",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636945758444230000/7501926c/64661646/martin-ome-cherry.jpg",
+      "value": 2570,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 2
+    },
+    {
+      "name": "WASHBURN WG7S-O-U",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636893741985100000/578aec27/64638292/washburn-wg7s-o-u.jpg",
+      "value": 230,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 3
+    },
+    {
+      "name": "FURCH Green Gc-SR 48mm 2019",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636985505174000000/c4241ba3/64672213/furch-green-gc-sr-48mm-2019.jpg",
+      "value": 1690,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 4
+    },
+    {
+      "name": "FURCH Red Master's Choice Gc-SR",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636961304983700000/f0991176/64666429/furch-red-masters-choice-gc-sr.jpg",
+      "value": 3180,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 5
+    },
+    {
+      "name": "TAYLOR 224ce-K DLX",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/velky_v2/na/637037108348170000/8b19d63a/64685206/taylor-224ce-k-dlx.jpg",
+      "value": 1650,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 6
+    }
+  ],
+  "electricGuitars": [
+    {
+      "name": "EPIPHONE Les Paul Standard 50s",
+      "type": "Electric Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637293864342570000/62e1de29/64760364/epiphone-les-paul-standard-50s-heritage-cherry-sunburst.jpg",
+      "value": 585,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 7
+    },
+    {
+      "name": "EPIPHONE Les Paul Custom Alpine White",
+      "type": "Electric Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637297321227770000/d7656543/64762181/epiphone-les-paul-custom-alpine-white.jpg",
+      "value": 610,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 8
+    },
+    {
+      "name": "EPIPHONE Flying V Ebony",
+      "type": "Electric Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637299067826870000/f3fe146f/64762793/epiphone-flying-v-ebony.jpg",
+      "value": 570,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 9
+    },
+    {
+      "name": "GIBSON ES-339 Figured Sixties Cherry",
+      "type": "Electric Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637453823574870000/5249f809/64810306/gibson-es-339-figured-sixties-cherry.jpg",
+      "value": 2935,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 10
+    },
+    {
+      "name": "IBANEZ GRX40-CA",
+      "type": "Electric Guitars",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637176168857300000/18e804e6/64724058/ibanez-grx40-ca.jpg",
+      "value": 167,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 11
+    },
+    {
+      "name": "FENDER American Professional II",
+      "type": "Electric Guitars",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637375758782500000/e741e0cb/64787634/fender-american-professional-ii-stratocaster-mn-owt.jpg",
+      "value": 1730,
+      "qty": 1,
+      "totalPrice": 0,
+      "id": 12
+    }
+  ],
+  "messages": [],
+  "accountsRegistered": [],
+  "cart": [],
+  "productsPurchased": [
+    {
+      "name": "WASHBURN WG7S-O-U",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636893741985100000/578aec27/64638292/washburn-wg7s-o-u.jpg",
+      "value": 230,
+      "qty": 4,
+      "totalPrice": 920,
+      "id": 3
+    },
+    {
+      "name": "Fender CD-60SCE Dreadnought",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636709867124070000/a04fb2d4/64395453/fender-cd-60sce-wn-nat.jpg",
+      "value": 250,
+      "qty": 3,
+      "totalPrice": 750,
+      "id": 1
+    },
+    {
+      "name": "MARTIN OME Cherry",
+      "type": "Acoustic Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636945758444230000/7501926c/64661646/martin-ome-cherry.jpg",
+      "value": 2570,
+      "qty": 3,
+      "totalPrice": 7710,
+      "id": 2
+    }
+  ]
+}

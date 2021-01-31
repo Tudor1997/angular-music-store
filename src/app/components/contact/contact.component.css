@@ -1,0 +1,21 @@
+button{
+    float:right;
+}
+.form-group{
+    padding: 5px;
+}
+label{
+    margin:2px;
+}
+.fistCol{
+    padding-top:5px;
+}
+img{
+    margin:30px 10px 0px 0px;
+}
+.form-horizontal{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin-left:10px;
+}

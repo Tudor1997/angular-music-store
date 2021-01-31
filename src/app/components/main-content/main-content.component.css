@@ -1,0 +1,58 @@
+.container-fluid{
+    margin-bottom:10.23rem;
+}
+#carouselExampleControls{
+    margin-top:110px;
+    border-radius:3px;
+    border:1px solid;
+}
+.carousel-caption{
+    left:40%;
+    right:40%;
+}
+.link{
+    text-decoration:none;
+    color:white;
+}
+.jumbotron{
+    margin-top:100px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.logo{
+    align-self:center;
+}
+.display-4 , .title{
+    align-self:center;
+    padding-bottom:10px;
+    color:white;
+}
+@media ( max-width:1040px){
+    .container-fluid{
+        margin-bottom:11.45rem;
+    }
+   
+}
+
+@media (min-width:976px){
+    .div-col-7{
+    position:relative;
+    }
+   .d-block{
+       height:20rem;
+   }
+    #carouselExampleControls{
+        width: 90%;
+        left:6%;
+        right:5%;
+      
+    }
+}
+@media (min-width:1024px){
+    .container-fluid{
+       
+        margin-bottom:17rem;
+    }
+}

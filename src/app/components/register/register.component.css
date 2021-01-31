@@ -1,0 +1,63 @@
+.container-fluid{
+    margin-bottom:5.6rem;
+}
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-google {
+    background-color: #DB4437;
+    color: #fff;
+    margin-right:2px;
+}
+.form-group{
+    margin-bottom:3px;
+
+}
+.text-center{
+   text-align: center;
+
+   margin-top:20px;
+}
+.submit{
+    float:right;
+    margin-top:20px;
+}
+
+.alert{
+    font-size: 12px;
+    height:auto;
+    width:23rem;
+    text-align:center;
+}
+.form-control.ng-touched.ng-invalid{
+    border:2px solid red;
+    border-radius:4px;
+    
+}
+.form-control{
+border-radius:4px;
+}

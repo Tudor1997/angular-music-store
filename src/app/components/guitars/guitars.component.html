@@ -1,0 +1,23 @@
+<div class="container-fluid animate__animated animate__backInLeft">
+    <div class="row" *ngFor="let guitar of guitars">
+        <div class="col" >
+          <div class="card" >
+            <img src="{{guitar.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="card-title">{{ guitar.name }}</h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{guitar.type}}</li>
+                <li class="list-group-item">Price: {{guitar.value}}&euro;</li>
+                <li class="list-group-item">
+                  <label for="quantity"> Quantity: </label>
+                  <input type="number" name="quantity" [(ngModel)]="guitar.qty" >
+                 </li>
+              </ul>
+              <a class="btn btn-dark btnCart" (click)="putGuitars(guitar)">Add to cart</a>
+              <a  class="btn btn-dark btnDetails">Details</a>
+            </div>
+            
+          </div>
+</div>
+</div>
+</div>
