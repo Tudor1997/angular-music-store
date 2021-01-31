@@ -1,0 +1,38 @@
+
+img{
+    width: 100%;
+margin-top:20px;
+}
+.container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-bottom:50px;
+   
+}
+
+.card-body{
+    text-align: center;
+}
+.card{
+    width:22rem;
+    height:17rem;
+    margin:20px;
+    padding:5px;
+}
+.card-title{
+    position: absolute;
+    bottom:10%;
+}
+.btnCart{
+    position:absolute;
+    bottom:1%;
+   right:0;
+   margin-right:10px;
+}
+
+a{
+    margin-bottom:10px;
+}
+

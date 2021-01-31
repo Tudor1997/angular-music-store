@@ -1,0 +1,34 @@
+<div class="container-fluid" *ngFor="let prod of productList">
+    <div class="card" id="card"  >
+        <div class="card-body  ">
+            <div class="row prodDetails">
+                
+       
+        <div class="col-10">
+            <h6 class="">{{prod.name}}</h6>
+            <img src="{{prod.img}}" class="img-thumbnail" alt="...">
+            
+        </div>
+        <div class="col price">
+            <span ><p>Price: {{prod.value}} &euro;</p></span>
+            <span><p>Total Price: {{prod.totalPrice}} &euro; </p></span>
+            <label for="quantity"> Quantity: </label>
+            <input type="number" min="1" max="30" name="quantity" [(ngModel)]="prod.qty" >
+        </div>
+            </div>
+            <div class="row buttons">
+                <div class="col">
+                    <button class="btn btn-dark" (click)="updateProduct(prod)">Update</button>
+                    <button class="btn btn-dark" (click)="delete(prod)">Delete</button>
+                    <button class='btn btn-dark' (click)="postProds(prod); delete(prod)">Submit</button>
+                </div>
+                
+            </div>    
+</div>
+</div>
+</div>
+<div class="container">
+   
+    <h5 id="total" >Total: {{total}} &euro;</h5>
+    
+</div>

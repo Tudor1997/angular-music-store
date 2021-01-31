@@ -1,0 +1,37 @@
+
+img{
+    width: 100%;
+padding-top:30px;
+height: 9rem;
+}
+.container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-bottom:50px;
+   
+}
+
+.card{
+    width:22rem;
+    height:23rem;
+    margin:20px;
+    padding:5px;
+   
+}
+.btnCart{
+    position:absolute;
+    bottom:0;
+}
+.btnDetails{
+    position:absolute;
+    bottom:0;
+    margin-left:110px;
+}
+a{
+    margin-bottom:10px;
+}
+input{
+    width:3rem;
+}
