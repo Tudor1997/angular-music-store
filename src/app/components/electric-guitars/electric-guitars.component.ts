@@ -8,17 +8,23 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./electric-guitars.component.css'],
 })
 export class ElectricGuitarsComponent implements OnInit, OnDestroy {
-  electricGuitars: any[] = [];
-  productList: Products[] = [];
+  electricGuitars!:Products[]
+  
   private subscription :Subscription = Subscription.EMPTY; 
+  
   constructor(private getProductsService: GetProductsService) {
   }
 
   ngOnInit(): void {
-   this.subscription = this.getProductsService
-      .getElectricGuitar()
-      .subscribe((electricGuitars) => (this.electricGuitars = electricGuitars));
+   this.getElectricGuitars();
   }
+  
+  getElectricGuitars(){
+    this.subscription = this.getProductsService
+    .getElectricGuitar()
+    .subscribe((electricGuitars) => (this.electricGuitars = electricGuitars));
+  }
+
   putElectricGuitars(prods: Products) {
     this.subscription =  this.getProductsService.postProds(prods).subscribe(() => {
       console.log(prods);

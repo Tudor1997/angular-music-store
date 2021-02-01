@@ -1,34 +1,39 @@
 <div class="container-fluid" *ngFor="let prod of productList">
-    <div class="card" id="card"  >
-        <div class="card-body  ">
-            <div class="row prodDetails">
-                
-       
-        <div class="col-10">
-            <h6 class="">{{prod.name}}</h6>
-            <img src="{{prod.img}}" class="img-thumbnail" alt="...">
-            
-        </div>
-        <div class="col price">
-            <span ><p>Price: {{prod.value}} &euro;</p></span>
-            <span><p>Total Price: {{prod.totalPrice}} &euro; </p></span>
+  <table class="card" id="card">
+    <div class="card-body">
+      <div class="row prodDetails">
+        <tr class="titles">
+          <th width="50%">Product Image</th>
+          <th class="details" width="30%">Product Details</th>
+          <th width="20%"></th>
+        </tr>
+
+        <tr class="detailsTd">
+          <th class="thImage" width="50%"><img src="{{prod.img}}" class="img-responsive image" alt="..." width="350px">
+          </th>
+          <th class="thDetails" width="30%">
+            <p>{{prod.name}}</p>
+            <p>Price: {{prod.value}} &euro;</p>
+            <p>Total Price: {{prod.totalPrice}} &euro; </p>
             <label for="quantity"> Quantity: </label>
-            <input type="number" min="1" max="30" name="quantity" [(ngModel)]="prod.qty" >
+            <input type="number" min="1" max="30" name="quantity" [(ngModel)]="prod.qty">
+          </th>
+          <th width="20%"></th>
+        </tr>
+        
+      </div>
+      <div class="row buttons">
+        <div class="col">
+          <button class="btn btn-dark" (click)="updateProduct(prod)">Update</button>
+          <button class="btn btn-dark" (click)="delete(prod)">Delete</button>
+          <button class='btn btn-dark'>Submit</button>
         </div>
-            </div>
-            <div class="row buttons">
-                <div class="col">
-                    <button class="btn btn-dark" (click)="updateProduct(prod)">Update</button>
-                    <button class="btn btn-dark" (click)="delete(prod)">Delete</button>
-                    <button class='btn btn-dark' (click)="postProds(prod); delete(prod)">Submit</button>
-                </div>
-                
-            </div>    
-</div>
-</div>
+      </div>
+    </div>
+  </table>
 </div>
 <div class="container">
-   
-    <h5 id="total" >Total: {{total}} &euro;</h5>
-    
+
+  <h5 id="total">Total: {{total}} &euro;</h5>
+  <button routerLink="/user" (click)="postProds(prods); delete(prods)" class="btn btn-dark checkout">Checkout</button>
 </div>

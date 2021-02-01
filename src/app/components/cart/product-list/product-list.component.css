@@ -1,16 +1,33 @@
-
-.card-body {
+table{
     display:flex;
-    width:22rem;
+    justify-content:space-around;
+    margin-top:10px;
 }
-.card{
-    position:relative;
-    margin-bottom:10px;
-    width: 35rem;
-}
-.prodDetails{
+table tr{
     display:flex;
-    flex-direction: column;
+ 
+    justify-content: space-around;
+}
+.titles{
+    font-size:19px;
+}
+.detailsTd{
+    display:flex;  
+}
+.thImage{
+    align-self:flex-start; 
+    margin-top: 20px;
+}
+.thDetails{
+    margin:35px 0;
+    text-align: center;
+    justify-self: center;
+   align-content: center;
+   
+}
+.details{
+    align-items:center;
+    text-align: center;
 }
 .buttons{
     position:absolute;
@@ -18,15 +35,17 @@
     bottom:0;
     margin-right:5px;
     margin-bottom:10px;
+    
    
     
 }
 button{
     margin-left:5px;
+    margin-top:20px;
 }
 .price{
     text-align:start;
-    margin-top:10px;
+    margin-top:20px;
 }
 input{
     width: 3rem;
@@ -37,6 +56,13 @@ input{
 }
 .full{
     height:90vw;
+    
+}
+#total{
+    margin-top:10px;
+}
+.checkout{
+  float:right;
 }
 @media (max-width:976px){
     .card{

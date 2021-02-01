@@ -5,6 +5,7 @@ import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { cartUrl } from 'src/app/config/api';
 import { Router } from '@angular/router';
 import { GetProductsService } from 'src/app/services/get-products.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { GetProductsService } from 'src/app/services/get-products.service';
 export class ProductListComponent implements OnInit, OnDestroy {
   productList!: Products[];
   @Input() total = 0;
- 
+ @Input() prods!:Products
   constructor(
     private CartService: CartServiceService,
     public productService: GetProductsService,
@@ -24,6 +25,10 @@ export class ProductListComponent implements OnInit, OnDestroy {
   ) {}
    
   ngOnInit(): void {
+   this.getProducts();
+ 
+  }
+  getProducts(){
     this.CartService.getCartItems().subscribe((product) => {
       this.productList = product;
       product.map((result) => {
@@ -48,7 +53,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
         this.productList.map((res) => {
           let totalPrice = res.totalPrice;
           totalPrice = res.qty * res.value; // calc total prize of one product/qty
-          window.location.reload();
+          // window.location.reload();
           return totalPrice;
         });
       });

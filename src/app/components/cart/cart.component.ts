@@ -14,10 +14,10 @@ export class CartComponent implements OnInit {
  getHeight(){
  
    if(this.container){
-  console.log(this.container.nativeElement.innerHTML.length);  
+  // console.log(this.container.nativeElement.innerHTML.length);  
   if(this.container.nativeElement.innerHTML.length === 420 ){
     this.container.nativeElement.classList.add('full');
-  }else if( this.container.nativeElement.innerHTML.length <= 1800){
+  }else if( this.container.nativeElement.innerHTML.length <= 2500){
     this.container.nativeElement.classList.add('full');
   }else{
     this.container.nativeElement.classList.remove('full');

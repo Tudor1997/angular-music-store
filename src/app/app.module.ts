@@ -25,6 +25,11 @@ import { ProductListComponent } from './components/cart/product-list/product-lis
 import { PageNotFountComponent } from './components/page-not-fount/page-not-fount.component';
 import {ConfirmValidatorDirective} from './services/confirm-validator.directive'
 import { CommonModule } from '@angular/common';
+import { SearchComponent } from './components/navbar/search/search.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
+
+
 
 
 @NgModule({
@@ -43,7 +48,11 @@ import { CommonModule } from '@angular/common';
     NavbarComponent,
     ProductListComponent,
     PageNotFountComponent,
-    ConfirmValidatorDirective
+    ConfirmValidatorDirective,
+    SearchComponent,
+    ProductDetailsComponent,
+    
+ 
    
    
   ],

@@ -1,5 +1,5 @@
 {
-  "products": [
+  "categories": [
     {
       "name": "Acoustic Guitars",
       "type": "Acoustic Guitars",
@@ -147,34 +147,16 @@
   ],
   "messages": [],
   "accountsRegistered": [],
-  "cart": [],
-  "productsPurchased": [
+  "cart": [
     {
-      "name": "WASHBURN WG7S-O-U",
-      "type": "Acoustic Guitar",
-      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636893741985100000/578aec27/64638292/washburn-wg7s-o-u.jpg",
-      "value": 230,
+      "name": "EPIPHONE Les Paul Custom Alpine White",
+      "type": "Electric Guitar",
+      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637297321227770000/d7656543/64762181/epiphone-les-paul-custom-alpine-white.jpg",
+      "value": 610,
       "qty": 4,
-      "totalPrice": 920,
-      "id": 3
-    },
-    {
-      "name": "Fender CD-60SCE Dreadnought",
-      "type": "Acoustic Guitar",
-      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636709867124070000/a04fb2d4/64395453/fender-cd-60sce-wn-nat.jpg",
-      "value": 250,
-      "qty": 3,
-      "totalPrice": 750,
-      "id": 1
-    },
-    {
-      "name": "MARTIN OME Cherry",
-      "type": "Acoustic Guitar",
-      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/636945758444230000/7501926c/64661646/martin-ome-cherry.jpg",
-      "value": 2570,
-      "qty": 3,
-      "totalPrice": 7710,
-      "id": 2
+      "totalPrice": 1830,
+      "id": 8
     }
-  ]
+  ],
+  "productsPurchased": []
 }

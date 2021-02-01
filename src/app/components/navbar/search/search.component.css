@@ -1,0 +1,17 @@
+.form-header{
+    display:flex;
+    margin-left:6rem;
+}
+.form-control{
+    width:300px;
+}
+@media (max-width:991px){
+    .form-header{
+        display:none;
+    }
+}
+@media (max-width:1014px){
+    .form-control{
+        width:auto;
+    }
+}

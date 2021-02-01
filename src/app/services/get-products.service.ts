@@ -1,3 +1,4 @@
+
 import { Products } from '../models/products.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -8,19 +9,13 @@ import {
   electricGuitarsUrl,
   guitarsUrl,
   productsPurchasedUrl,
-  productsUrl,
+  categoriesUrl
 } from 'src/app/config/api';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GetProductsService {
-  
- 
-  private readonly apiUrl: string;
-  private readonly guitarsUrl: string;
-  private readonly electricGuitarUrl: string;
-  private readonly cart: string;
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure
@@ -35,33 +30,23 @@ export class GetProductsService {
     throw new Error('Method not implemented.');
   }
 
-  constructor(private http: HttpClient) {
-    this.apiUrl = productsUrl;
-    this.guitarsUrl = guitarsUrl;
-    this.electricGuitarUrl = electricGuitarsUrl;
-    this.cart = cartUrl;
+  constructor(private http: HttpClient) {}
+
+   getCategories(): Observable<Products[]> {
+    return this.http.get<Products[]>(categoriesUrl);
   }
-     
+
   getGuitars(): Observable<Products[]> {
-    let guitars = this.guitarsUrl;
-    return this.http
-      .get<Products[]>(guitars)
+    return this.http.get<Products[]>(guitarsUrl)
       .pipe(catchError(this.handleError<any>('getGuitars', [])));
   }
 
-  getProducts(): Observable<Products[]> {
-    const url = this.apiUrl;
-    console.log(url);
-    return this.http.get<Products[]>(url);
-  }
-
   getElectricGuitar(): Observable<Products[]> {
-    const electricGuitar = this.electricGuitarUrl;
-    return this.http.get<Products[]>(electricGuitar);
+    return this.http.get<Products[]>(electricGuitarsUrl);
+      
   }
   getCart(): Observable<Products[]> {
-    const cart = this.cart;
-    return this.http.get<Products[]>(cart);
+    return this.http.get<Products[]>(cartUrl);
   }
   postProds(prods: Products ): Observable<Products[]> {
     return this.http.post<Products[]>(cartUrl, prods);

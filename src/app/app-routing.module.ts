@@ -1,3 +1,4 @@
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { PageNotFountComponent } from './components/page-not-fount/page-not-fount.component';
 import { ElectricGuitarsComponent } from './components/electric-guitars/electric-guitars.component';
 import { GuitarsComponent } from './components/guitars/guitars.component';
@@ -13,19 +14,24 @@ import { config } from 'rxjs';
 
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: MainContentComponent},
-  { path: 'products', component: ProductsComponent},
+  { path: 'categories', component: ProductsComponent},
   { path: 'cart', component: CartComponent},
   { path: 'user', component: UserAccountComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'guitars', component: GuitarsComponent},
+  { path: 'guitars/:id', component: GuitarsComponent},
   { path: 'electricGuitars', component: ElectricGuitarsComponent},
-  { path: 'products/guitars', component: GuitarsComponent},
-  { path: 'products/electricGuitars', component: ElectricGuitarsComponent},
-  {path: '**', component: PageNotFountComponent}
+  { path: 'electricGuitars/:id', component: ElectricGuitarsComponent},
+  { path: 'categories/guitars', component: GuitarsComponent},
+  { path: 'categories/electricGuitars', component: ElectricGuitarsComponent},
+  { path: 'productDetails/:id', component: ProductDetailsComponent},
+
+  { path: '**', component: PageNotFountComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

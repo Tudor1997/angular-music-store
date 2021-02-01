@@ -11,22 +11,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products?: any[];
+  categories?: any[];
  
-  constructor(
-    // db: AngularFireDatabase,
-    private getProductsService : GetProductsService
-    ) {
-      
-      // db.list('/products').valueChanges().subscribe(products => this.products = products);
-      // console.log(this.products);
-      
-     
-     }
+  constructor(private getProductsService : GetProductsService) {}
 
   ngOnInit(): void {
-  this.getProductsService.getProducts().subscribe( products => this.products = products);
-
+  this.getProducts();
   }
 
+  getProducts(){
+    this.getProductsService.getCategories().subscribe( categories => this.categories = categories);
+}
 }
