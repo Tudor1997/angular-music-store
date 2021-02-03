@@ -11,15 +11,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  categories?: any[];
+ 
  
   constructor(private getProductsService : GetProductsService) {}
 
   ngOnInit(): void {
-  this.getProducts();
+  
   }
 
-  getProducts(){
-    this.getProductsService.getCategories().subscribe( categories => this.categories = categories);
-}
+ 
 }

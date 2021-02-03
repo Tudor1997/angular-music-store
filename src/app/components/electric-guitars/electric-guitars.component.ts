@@ -10,30 +10,23 @@ import { Subscription } from 'rxjs';
 export class ElectricGuitarsComponent implements OnInit, OnDestroy {
   electricGuitars!:Products[]
   
-  private subscription :Subscription = Subscription.EMPTY; 
+  private subscription! :Subscription;
   
   constructor(private getProductsService: GetProductsService) {
   }
 
   ngOnInit(): void {
-   this.getElectricGuitars();
+   
   }
   
   getElectricGuitars(){
-    this.subscription = this.getProductsService
-    .getElectricGuitar()
-    .subscribe((electricGuitars) => (this.electricGuitars = electricGuitars));
+   
   }
 
-  putElectricGuitars(prods: Products) {
-    this.subscription =  this.getProductsService.postProds(prods).subscribe(() => {
-      console.log(prods);
-      prods.totalPrice = prods.qty * prods.value;
-     
-      
-    });
+  putElectricGuitars() {
+   
   }
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+   
   }
 }

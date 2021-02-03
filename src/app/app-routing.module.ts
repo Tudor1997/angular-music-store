@@ -1,4 +1,6 @@
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { AdminAuthGuardService } from './services/admin-auth-guard.service';
+import { OrderSuccessComponent } from './components/order-success/order-success.component';
+import { RegisterComponent } from './components/register/register.component';
 import { PageNotFountComponent } from './components/page-not-fount/page-not-fount.component';
 import { ElectricGuitarsComponent } from './components/electric-guitars/electric-guitars.component';
 import { GuitarsComponent } from './components/guitars/guitars.component';
@@ -8,9 +10,15 @@ import { CartComponent } from './components/cart/cart.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { ProductsComponent } from './components/products/products.component';
-import { RegisterComponent } from './components/register/register.component';
+
 import { UserAccountComponent } from './components/user-account/user-account.component';
-import { config } from 'rxjs';
+import { CheckOutComponent } from './components/check-out/check-out.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { AuthGuardService } from './services/auth-guard.service';
+
 
 
 
@@ -19,17 +27,26 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: MainContentComponent},
   { path: 'categories', component: ProductsComponent},
+  { path: 'register', component: RegisterComponent},
   { path: 'cart', component: CartComponent},
   { path: 'user', component: UserAccountComponent},
-  { path: 'register', component: RegisterComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'guitars', component: GuitarsComponent},
-  { path: 'guitars/:id', component: GuitarsComponent},
   { path: 'electricGuitars', component: ElectricGuitarsComponent},
-  { path: 'electricGuitars/:id', component: ElectricGuitarsComponent},
-  { path: 'categories/guitars', component: GuitarsComponent},
+  { path: 'categories/guitars', component: GuitarsComponent},  
   { path: 'categories/electricGuitars', component: ElectricGuitarsComponent},
-  { path: 'productDetails/:id', component: ProductDetailsComponent},
+  { path: 'login', component: LoginComponent},
+
+
+  { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuardService]},
+  { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuardService]},
+  { path: 'my-orders', component: MyOrdersComponent, canActivate: [AuthGuardService]},
+  
+
+  { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+  { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService,AdminAuthGuardService]},
+  
+
 
   { path: '**', component: PageNotFountComponent}
 ];

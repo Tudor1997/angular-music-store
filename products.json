@@ -147,16 +147,8 @@
   ],
   "messages": [],
   "accountsRegistered": [],
-  "cart": [
-    {
-      "name": "EPIPHONE Les Paul Custom Alpine White",
-      "type": "Electric Guitar",
-      "img": "https://img.kytary.com/eshop_ro/stredni_v4/na/637297321227770000/d7656543/64762181/epiphone-les-paul-custom-alpine-white.jpg",
-      "value": 610,
-      "qty": 4,
-      "totalPrice": 1830,
-      "id": 8
-    }
-  ],
-  "productsPurchased": []
+  "cart": [],
+  "productsPurchased": [
+   
+  ]
 }

@@ -1,196 +1,22 @@
-<div class="container-fluid  animate__animated animate__backInLeft">
-  <div class="card bg-light">
-    <article class="card-body mx-auto" style="max-width: 400px;">
-      <h4 class="card-title mt-3 text-center">Create Account</h4>
-      <p>
-        <a href="" class="btn btn-block btn-google">
-          <i class="fa fa-google" aria-hidden="true"></i>   Login via Google</a>
-        <a href="" class="btn btn-block btn-facebook">
-          <i class="fa fa-facebook-official" aria-hidden="true"></i>  Login via Facebook</a>
-      </p>
-      <p class="divider-text">
-        <span class="bg-light">OR</span>
-      </p>
-      <form #userForm="ngForm" (ngSubmit)="postAccounts(userForm.value)" ngNativeValidate>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-          </div>
-          <input 
-           minlength="3"
-          class="form-control" 
-          placeholder="Firstname" 
-          ngModel 
-          name="firstName" 
-          #firstName="ngModel" 
-          type="text" 
-          required>
-          <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
-            <div *ngIf="firstName.errors.required">
-            First Name is required.
-          </div>
-            <div *ngIf="firstName.errors.minlength">
-            First Name should be minimum {{firstName.errors.minlength.requiredLength}} characters.
-          </div> 
-          </div>
-        </div>
-        
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-          </div>
-          <input 
-           class="form-control" 
-           placeholder="Lastname" 
-           ngModel 
-           name="lastName" 
-           #lastName="ngModel" 
-           type="text" 
-           minlength="3" 
-           required>
-        </div>
-        <div class="alert alert-danger"  *ngIf="lastName.touched && !lastName.valid">
-          <div *ngIf="lastName.errors.required">
-            Last Name is required.
-          </div>
-          <div *ngIf="lastName.errors.minlength">
-            Last Name should be minimum {{lastName.errors.minlength.requiredLength}} characters.
-        </div> 
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
-          </div>
-          <input class="form-control" 
-          placeholder="Username" 
-          ngModel 
-          #userName="ngModel"
-          name="userName" 
-          minlength="3"
-          type="text" 
-          required>
-        </div> <!-- form-group// -->
-        <div class="alert alert-danger"  *ngIf="userName.touched && !lastName.valid">
-          <div *ngIf="userName.errors.required">
-            Username is required.
-          </div>
-          <div *ngIf="userName.errors.minlength">
-            Username should be minimum {{userName.errors.minlength.requiredLength}} characters.
-        </div> 
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
-          </div>
-          <input 
-          class="form-control" 
-          placeholder="Email address"
-           ngModel 
-           name="email" 
-           type="email" 
-           #email="ngModel"
-           required>
-          <div class="alert alert-danger"  *ngIf="email.touched && !email.valid">
-            <div *ngIf="email.errors.required">
-              Email is required.
-            </div>
-          </div>
-        </div> <!-- form-group// -->
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-          </div>
-          <select class="custom-select" style="max-width: 120px;">
-            <option selected="">(+)40</option>
-          </select>
-          <input 
-          class="form-control"   
-          #phoneNumber="ngModel" 
-          placeholder="Phone number" 
-          ngModel
-           name="phoneNumber"
-           type="text" 
-           required>
-           
-        </div> <!-- form-group// -->
-        <div class="alert alert-danger"  *ngIf="phoneNumber.touched && !phoneNumber.valid">
-        <div *ngIf="phoneNumber.errors.required">
-          Phone number is required.
-        </div>
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-          </div>
-          <input 
-          class="form-control" 
-          placeholder="Create password" 
-          ngModel
-          name="password"
-          type="password"
-          (input)="confirmPassword.control.updateValueAndValidity()"
-          #password="ngModel"
-          minlength="6"
-           required>
-        </div>
-       
-
-        <div class="alert alert-danger"  *ngIf="password.touched && !password.valid">
-          <div *ngIf="password.errors.required">
-            Password is required.
-          </div>
-          <div *ngIf="password.errors.minlength">
-           Password should be minimum {{password.errors.minlength.requiredLength}} characters.
-          </div> 
-        </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-          </div>
-          <input 
-          class="form-control" 
-          placeholder="Confirm password" 
-          ngModel
-          name="confirmPassword" 
-          type="password" 
-          appConfirmValidator="password"
-          #confirmPassword="ngModel"
-          minlength="6"
-          required>
-          <div class="alert alert-danger"  *ngIf="confirmPassword.touched && !confirmPassword.valid">
-            <div *ngIf="confirmPassword.errors?.required">
-              Confirm Password is required.
-            </div>
-            <div *ngIf="confirmPassword.touched && confirmPassword.errors?.notEqual 
-            && !confirmPassword.errors?.required">
-              Confirm Password and Password does not match.
-            </div>
-          </div>
-        </div>
+<div id="login-box">
+    <div class="left">
+      <h1>Sign up</h1>
+      
+      <input type="text" name="firstname" placeholder="Firstname" />
+      <input type="text" name="lastname" placeholder="Lastname" />
+      <input type="text" name="username" placeholder="Username" />
+      <input type="text" name="email" placeholder="E-mail" />
+      <input type="password" name="password" placeholder="Password" />
+      <input type="password" name="password2" placeholder="Retype password" />
+      
+      <input type="submit" name="signup_submit" value="Sign me up" />
+    </div>
     
-        <div class="form-group">
-          <span> <i class="fa fa-address-card-o" aria-hidden="true"></i> Your address:</span>
-          <textarea 
-          class="form-control" 
-          id="textarea" 
-          ngModel 
-          name="address"
-           placeholder="Address" 
-           rows="3"
-           #textArea="ngModel"
-            required></textarea>
-            <div class="alert alert-danger"  *ngIf="textArea.touched && !textArea.valid">
-              <div *ngIf="textArea.errors.required">
-                Address is required.
-              </div>
-            </div>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-dark btn-block submit"> Create Account </button>
-        </div>
-
-        <p class="text-center">Have an account? <a routerLink="/login">Log In</a> </p>
-      </form>
-    </article>
-  </div> <!-- card.// -->
-</div>
+    <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+      
+      <button class="social-signin facebook">Log in with facebook</button>
+      <button class="social-signin google">Log in with Google+</button>
+    </div>
+    <div class="or">OR</div>
+  </div>

@@ -1,20 +1,20 @@
 <div class="container-fluid animate__animated animate__backInLeft">
-    <div class="row" *ngFor="let electricGuitar of electricGuitars">
+    <div class="row">
         <div class="col" >
           <div class="card" >
-            <img src="{{electricGuitar.img}}" class="card-img-top" alt="...">
+            <img src=".." class="card-img-top" alt="...">
             <div class="card-body">
-              <h6 class="card-title">{{ electricGuitar.name }}</h6>
+              <h6 class="card-title">  </h6>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{electricGuitar.type}}</li>
-                <li class="list-group-item">Price: {{electricGuitar.value}}&euro;</li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item">Price: &euro;</li>
                <li class="list-group-item">
                 <label for="quantity"> Quantity: </label>
-                <input type="number" min="1" max="30" name="quantity" [(ngModel)]="electricGuitar.qty" >
+                <input type="number" min="1" max="30" name="quantity" >
                </li>
                
               </ul>
-              <a  class="btn btn-dark btnCart" (click)="putElectricGuitars(electricGuitar)">Add to cart</a>
+              <a  class="btn btn-dark btnCart" >Add to cart</a>
               <a  class="btn btn-dark btnDetails">Details</a>
             </div>
             
