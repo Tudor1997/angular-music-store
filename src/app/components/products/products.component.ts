@@ -1,5 +1,5 @@
-import { GetProductsService } from '../../services/get-products.service';
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
 
 
 
@@ -11,13 +11,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+ categories$;
  
- 
-  constructor(private getProductsService : GetProductsService) {}
+  constructor(private categoriesService: CategoryService) {
+    this.categories$ = this.categoriesService.getCategories().valueChanges();
+  }
 
   ngOnInit(): void {
   
   }
+
 
  
 }

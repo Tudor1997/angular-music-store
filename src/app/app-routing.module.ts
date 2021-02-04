@@ -18,6 +18,8 @@ import { AdminProductsComponent } from './components/admin/admin-products/admin-
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { ProductFormComponent } from './components/admin/product-form/product-form.component';
+
 
 
 
@@ -44,6 +46,7 @@ const routes: Routes = [
   
 
   { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+  { path: 'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
   { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService,AdminAuthGuardService]},
   
 

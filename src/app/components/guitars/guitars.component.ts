@@ -1,6 +1,6 @@
-import { GetProductsService } from '../../services/get-products.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { CategoryService } from 'src/app/services/category.service';
 
 
 @Component({
@@ -10,13 +10,15 @@ import { Subscription } from 'rxjs';
 })
 export class GuitarsComponent implements OnInit, OnDestroy {
 
-  
+  guitars$;
   private subscription! :Subscription; 
-  constructor(private getProductsService: GetProductsService) {}
+  constructor(private categoryService: CategoryService) {
+    this.guitars$ = this.categoryService.getGuitars().valueChanges()
+  }
 
   ngOnInit(): void {
   }
-  getGuitars(){ }
+ 
   ngOnDestroy(): void {
    
   }

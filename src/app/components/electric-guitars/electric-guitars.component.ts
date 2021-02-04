@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { GetProductsService } from '../../services/get-products.service';
 import { Products } from '../../models/products.interface';
 import { Subscription } from 'rxjs';
 @Component({
@@ -12,7 +11,7 @@ export class ElectricGuitarsComponent implements OnInit, OnDestroy {
   
   private subscription! :Subscription;
   
-  constructor(private getProductsService: GetProductsService) {
+  constructor() {
   }
 
   ngOnInit(): void {

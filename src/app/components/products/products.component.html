@@ -1,11 +1,11 @@
 <div class="container-fluid animate__animated animate__backInLeft">
     <div class="row">
         <div class="col" >
-            <div class="card" >
-                <img src="" class="card-img-top" style="max-height:165px" alt="...">
+            <div class="card" *ngFor="let categ of categories$  | async" >
+                <img src="{{categ.img}}" class="card-img-top" style="max-height:165px" alt="...">
                 <div class="card-body">
-                  <h6 class="card-title"></h6>
-                  <a class="btn btn-dark btnCart">Go to Products</a>
+                  <h6 class="card-title">{{categ.type}}</h6>
+                  <a routerLink="/categories/{{categ.url}}" class="btn btn-dark btnCart">Go to Products</a>
                   
                 </div>
                 

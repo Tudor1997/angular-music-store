@@ -1,0 +1,13 @@
+.container{
+    margin-top:7rem;
+    margin-bottom: 11rem;
+}
+.form-group{
+    width: 80%;
+}
+.card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
