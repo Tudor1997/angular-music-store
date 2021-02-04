@@ -14,7 +14,7 @@ import { AppUser } from '../models/app-user';
 })
 export class AuthService {
   user$!: Observable<firebase.User | null> ;
-  
+  isLoggedIn: boolean = false
   constructor(private afAuth: AngularFireAuth,
     private route:ActivatedRoute,
     private userService:UserService) {
@@ -28,8 +28,25 @@ export class AuthService {
     this.afAuth.auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider());
     
   }
+  loginWithEmail(email: string, password: string){
+ 
+      this.afAuth.auth.signInWithEmailAndPassword(email, password)
+      .then(res=>{
+        this.isLoggedIn = true
+        localStorage.setItem('user', JSON.stringify(res.user))
+      });
+    
+  }
+  signup(email: string, password: string){
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+    .then(res=>{
+      this.isLoggedIn = true
+      localStorage.setItem('user', JSON.stringify(res.user))
+    })
+  }
   logout(){
     this.afAuth.auth.signOut();
+    localStorage.removeItem('user')
   }
   get appUser$(): Observable<AppUser | null>{
     return this.user$.pipe(switchMap(user => {

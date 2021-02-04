@@ -1,17 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
-*:focus {
-  outline: none;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500');
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #DDD;
-  font-size: 16px;
-  color: #222;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-}
+
 
 #login-box {
   position: relative;
@@ -21,6 +10,7 @@ body {
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5.45rem;
 }
 
 .left {

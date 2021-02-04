@@ -10,20 +10,11 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
   showLoadingIndicator = true;
-  constructor(private _router: Router,
+  constructor( 
     private auth:AuthService,
     router:Router,
     private userService:UserService) {
-    this._router.events.subscribe((routerEvent: Event) => {
-      if (routerEvent instanceof NavigationStart) {
-        this.showLoadingIndicator = true;
-      }
-      if (routerEvent instanceof NavigationEnd ||
-        routerEvent instanceof NavigationCancel ||
-        routerEvent instanceof NavigationError) {
-        this.showLoadingIndicator = false;
-      }
-    });
+ 
 
     this.auth.user$.subscribe(user =>{
       if(user){

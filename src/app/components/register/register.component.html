@@ -1,22 +1,22 @@
 <div id="login-box">
-    <div class="left">
+    <form #formData='ngForm' (ngSubmit)="onSubmit(email.value, password.value)" class="left">
       <h1>Sign up</h1>
       
-      <input type="text" name="firstname" placeholder="Firstname" />
-      <input type="text" name="lastname" placeholder="Lastname" />
-      <input type="text" name="username" placeholder="Username" />
-      <input type="text" name="email" placeholder="E-mail" />
-      <input type="password" name="password" placeholder="Password" />
-      <input type="password" name="password2" placeholder="Retype password" />
+      <input type="text" #firstname (ngModel)='firstname' name="firstname" placeholder="Firstname" required/>
+      <input type="text" #lastname (ngModel)='lastname' name="lastname" placeholder="Lastname" required/>
+      <input type="text" #username (ngModel)='username' name="username" placeholder="Username" required/>
+      <input type="text" #email (ngModel)='email' name="email" placeholder="E-mail" required/>
+      <input type="password" #password name="password" (ngModel)='password' placeholder="Password" required/>
+      <input type="password" #password2 name="password2" (ngModel)='password2' placeholder="Retype password" required/>
       
       <input type="submit" name="signup_submit" value="Sign me up" />
-    </div>
+    </form>
     
     <div class="right">
       <span class="loginwith">Sign in with<br />social network</span>
       
       <button class="social-signin facebook">Log in with facebook</button>
-      <button class="social-signin google">Log in with Google+</button>
+      <button class="social-signin google"(click)="login()">Log in with Google</button>
     </div>
     <div class="or">OR</div>
   </div>
