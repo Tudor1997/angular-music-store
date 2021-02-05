@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Products } from '../../models/products.interface';
 import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-electric-guitars',
@@ -7,7 +6,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./electric-guitars.component.css'],
 })
 export class ElectricGuitarsComponent implements OnInit, OnDestroy {
-  electricGuitars!:Products[]
+ 
   
   private subscription! :Subscription;
   

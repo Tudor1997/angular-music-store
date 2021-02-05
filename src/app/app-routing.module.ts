@@ -11,7 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { ProductsComponent } from './components/products/products.component';
 
-import { UserAccountComponent } from './components/user-account/user-account.component';
+
 import { CheckOutComponent } from './components/check-out/check-out.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'categories', component: ProductsComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'cart', component: CartComponent},
-  { path: 'user', component: UserAccountComponent},
+ 
   { path: 'contact', component: ContactComponent},
   { path: 'guitars', component: GuitarsComponent},
   { path: 'electricGuitars', component: ElectricGuitarsComponent},
@@ -45,8 +45,10 @@ const routes: Routes = [
   { path: 'my-orders', component: MyOrdersComponent, canActivate: [AuthGuardService]},
   
 
-  { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+  
   { path: 'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+  { path: 'admin/products/:id', component: ProductFormComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
+  { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
   { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService,AdminAuthGuardService]},
   
 

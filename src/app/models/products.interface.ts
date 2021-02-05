@@ -1,11 +1,6 @@
-export interface Products {
-    id: number,
-   name: string,
-    type: string,
-    img: string,
-    value: number,
-    url?:string,
-    qty:number,
-    productCategory: string,
-    totalPrice:number,
+export interface Product {
+    title: string;
+    price: number;
+    category: string;
+    imageUrl: string;
 }

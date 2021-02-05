@@ -13,7 +13,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { SecondNavbarComponent } from './components/second-navbar/second-navbar.component';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
-import { UserAccountComponent } from './components/user-account/user-account.component';
+
 
 import { ContactComponent } from './components/contact/contact.component';
 import { GuitarsComponent } from './components/guitars/guitars.component';
@@ -46,6 +46,7 @@ import { CustomFormsModule } from 'ng2-validation';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,6 @@ import { CustomFormsModule } from 'ng2-validation';
     ProductsComponent,
     SecondNavbarComponent,
     CartComponent,
-    UserAccountComponent,
     ContactComponent,
     GuitarsComponent,
     ElectricGuitarsComponent,
@@ -87,7 +87,8 @@ import { CustomFormsModule } from 'ng2-validation';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     NgbModule,
-    CustomFormsModule
+    CustomFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

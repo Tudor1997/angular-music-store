@@ -11,3 +11,9 @@
     align-items: center;
     
 }
+.buttons{
+    margin:10px 0px;
+}
+.buttons button{
+    margin:0px 5px;
+}
