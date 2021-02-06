@@ -41,6 +41,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductFormComponent } from './components/admin/product-form/product-form.component';
 import { CustomFormsModule } from 'ng2-validation';
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 
 
@@ -71,6 +72,7 @@ import { CustomFormsModule } from 'ng2-validation';
     AdminOrdersComponent,
     LoginComponent,
     ProductFormComponent,
+    CatalogComponent,
     
  
    

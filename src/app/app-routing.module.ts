@@ -19,6 +19,7 @@ import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orde
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { ProductFormComponent } from './components/admin/product-form/product-form.component';
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 
 
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'categories', component: ProductsComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'cart', component: CartComponent},
+  { path: 'catalog', component: CatalogComponent},
  
   { path: 'contact', component: ContactComponent},
   { path: 'guitars', component: GuitarsComponent},

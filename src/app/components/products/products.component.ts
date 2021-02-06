@@ -14,7 +14,7 @@ export class ProductsComponent implements OnInit {
  categories$;
  
   constructor(private categoriesService: CategoryService) {
-    this.categories$ = this.categoriesService.getCategories().valueChanges();
+    this.categories$ = this.categoriesService.getAll().valueChanges();
   }
 
   ngOnInit(): void {
