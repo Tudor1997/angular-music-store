@@ -1,5 +1,6 @@
 .navbar{
     color:white;
+    box-shadow: 2px 5px 16px 0px #0B325E;
 }
 .navbar-collapse{
  text-align: center;

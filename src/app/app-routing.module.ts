@@ -2,14 +2,12 @@ import { AdminAuthGuardService } from './services/admin-auth-guard.service';
 import { OrderSuccessComponent } from './components/order-success/order-success.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PageNotFountComponent } from './components/page-not-fount/page-not-fount.component';
-import { ElectricGuitarsComponent } from './components/electric-guitars/electric-guitars.component';
-import { GuitarsComponent } from './components/guitars/guitars.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CartComponent } from './components/cart/cart.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
-import { ProductsComponent } from './components/products/products.component';
+
 
 
 import { CheckOutComponent } from './components/check-out/check-out.component';
@@ -29,16 +27,11 @@ import { CatalogComponent } from './components/catalog/catalog.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: MainContentComponent},
-  { path: 'categories', component: ProductsComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'cart', component: CartComponent},
   { path: 'catalog', component: CatalogComponent},
  
   { path: 'contact', component: ContactComponent},
-  { path: 'guitars', component: GuitarsComponent},
-  { path: 'electricGuitars', component: ElectricGuitarsComponent},
-  { path: 'categories/guitars', component: GuitarsComponent},  
-  { path: 'categories/electricGuitars', component: ElectricGuitarsComponent},
   { path: 'login', component: LoginComponent},
 
 

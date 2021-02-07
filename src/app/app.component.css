@@ -3,9 +3,10 @@
     margin:0;
     
 }
-.second{
-    position:relative;
-  
+#second{
+
+   
+  height: 100%;
 }
 /* preloader */
 .lds-facebook {

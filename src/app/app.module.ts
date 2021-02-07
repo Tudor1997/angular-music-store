@@ -9,15 +9,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 
-import { ProductsComponent } from './components/products/products.component';
-import { SecondNavbarComponent } from './components/second-navbar/second-navbar.component';
+
+
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
 
 
 import { ContactComponent } from './components/contact/contact.component';
-import { GuitarsComponent } from './components/guitars/guitars.component';
-import { ElectricGuitarsComponent } from './components/electric-guitars/electric-guitars.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -42,6 +40,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductFormComponent } from './components/admin/product-form/product-form.component';
 import { CustomFormsModule } from 'ng2-validation';
 import { CatalogComponent } from './components/catalog/catalog.component';
+import { ProductFilterComponent } from './components/catalog/product-filter/product-filter.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 
 
@@ -52,12 +52,8 @@ import { CatalogComponent } from './components/catalog/catalog.component';
   declarations: [
     AppComponent,
     MainContentComponent,
-    ProductsComponent,
-    SecondNavbarComponent,
     CartComponent,
     ContactComponent,
-    GuitarsComponent,
-    ElectricGuitarsComponent,
     FooterComponent,
     NavbarComponent,
     PageNotFountComponent,
@@ -73,6 +69,8 @@ import { CatalogComponent } from './components/catalog/catalog.component';
     LoginComponent,
     ProductFormComponent,
     CatalogComponent,
+    ProductFilterComponent,
+    ProductCardComponent,
     
  
    

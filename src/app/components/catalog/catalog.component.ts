@@ -1,23 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/products.interface';
-import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
 import { switchMap } from 'rxjs/operators';
+import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
+import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.css']
 })
-export class CatalogComponent implements OnInit {
+export class CatalogComponent implements OnInit , OnDestroy{
   products: Product[] = [];
   filteredProducts: Product[] = [];
-  categories$;
+  cart: any;
   category!:string | null;
+  subscription!:Subscription
   constructor(productService: ProductService, 
-    categoryService: CategoryService,
-    route:ActivatedRoute) { 
+    route:ActivatedRoute,
+   private shoppingCartService: ShoppingCartService) { 
     
+   
+
       productService.getAll().pipe(
         switchMap(products =>{
           this.products = products;
@@ -30,13 +34,14 @@ export class CatalogComponent implements OnInit {
         this.products.filter(p => p.category === this.category) :
         this.products;
       });
-
-    this.categories$ = categoryService.getAll().valueChanges();
-
-   
   }
 
-  ngOnInit(): void {
-  }
+  async ngOnInit(): Promise<any> {
+   this.subscription =(await this.shoppingCartService.getCart()).valueChanges().subscribe(cart => this.cart = cart);
+       
+}
+ngOnDestroy(): void {
+  this.subscription.unsubscribe();
+}
 
 }

@@ -11,18 +11,18 @@ export class CartComponent implements OnInit {
   @ViewChild('container') container?: ElementRef;
   ngOnInit(): void {
   }
- getHeight(){
+//  getHeight(){
  
-   if(this.container){
-  // console.log(this.container.nativeElement.innerHTML.length);  
-  if(this.container.nativeElement.innerHTML.length === 420 ){
-    this.container.nativeElement.classList.add('full');
-  }else if( this.container.nativeElement.innerHTML.length <= 2500){
-    this.container.nativeElement.classList.add('full');
-  }else{
-    this.container.nativeElement.classList.remove('full');
-  }
-   }
+//    if(this.container){
+//   // console.log(this.container.nativeElement.innerHTML.length);  
+//   if(this.container.nativeElement.innerHTML.length === 420 ){
+//     this.container.nativeElement.classList.add('full');
+//   }else if( this.container.nativeElement.innerHTML.length <= 2500){
+//     this.container.nativeElement.classList.add('full');
+//   }else{
+//     this.container.nativeElement.classList.remove('full');
+//   }
+//    }
   
- }
+//  }
 }

@@ -10,5 +10,7 @@ body{
     background-color: rgb(56, 107, 158);
     background-blend-mode: lighten;
 }
-html, body { height: 100%; }
+html, body {
+     height: 100%; 
+    }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -43,14 +43,20 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
   setHeight() {
     if (this.container) {
       console.log(this.container.nativeElement.innerHTML.length);
-      if (this.container.nativeElement.innerHTML.length === 420) {
+      if (this.container.nativeElement.innerHTML.length > 420 && this.container.nativeElement.innerHTML.length < 2179) {
         this.container.nativeElement.classList.add('full');
-      }else if(this.container.nativeElement.innerHTML.length === 3351){
+        this.container.nativeElement.classList.remove('medium');
+      }else if(this.container.nativeElement.innerHTML.length === 2179){
+        this.container.nativeElement.classList.add('half-medium');
         this.container.nativeElement.classList.remove('full');
-      } else if (this.container.nativeElement.innerHTML.length <= 3500) {
-        this.container.nativeElement.classList.add('full');
-      } else {
+        this.container.nativeElement.classList.remove('medium');
+      } else if(this.container.nativeElement.innerHTML.length > 2179 || this.container.nativeElement.innerHTML.length === 4000){
         this.container.nativeElement.classList.remove('full');
+        this.container.nativeElement.classList.add('medium');
+   
+      }  else {
+        this.container.nativeElement.classList.remove('full');
+        this.container.nativeElement.classList.remove('medium');
       }
     }
   }

@@ -1,5 +1,8 @@
 .navbar{
-    margin-top:20px;
+   
+    width: 100%;
+  
+    box-shadow: -2px -19px 22px -11px rgba(0,0,0,0.79);
 }
 .container {
     position:relative;
@@ -14,7 +17,7 @@
     justify-content: center;
 }
 a{
-    font-size: 16px;
+    font-size: 14px;
 }
 .col-lg{
     display:flex;

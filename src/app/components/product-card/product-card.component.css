@@ -1,0 +1,14 @@
+.card{
+    margin:10px;
+   
+}
+img{
+    width: 100%;
+margin-top:20px;
+}
+.card-footer{
+    padding:0;
+}
+button{
+    width:100%;
+}
