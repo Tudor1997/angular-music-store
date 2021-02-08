@@ -42,6 +42,7 @@ import { CustomFormsModule } from 'ng2-validation';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { ProductFilterComponent } from './components/catalog/product-filter/product-filter.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductQuantityComponent } from './components/product-quantity/product-quantity.component';
 
 
 
@@ -71,6 +72,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     CatalogComponent,
     ProductFilterComponent,
     ProductCardComponent,
+    ProductQuantityComponent,
     
  
    

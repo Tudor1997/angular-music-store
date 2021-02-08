@@ -7,3 +7,7 @@
 .full{
   height:60.7vh;
 }
+table{
+  background-color: white;
+  border-radius: 4px;
+}

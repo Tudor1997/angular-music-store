@@ -1,4 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { ShoppingCart } from 'src/app/models/shopping-cart';
+import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,10 +11,17 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private shoppingCartService: ShoppingCartService) { }
   @ViewChild('container') container?: ElementRef;
-  ngOnInit(): void {
+
+  cart$!: Observable<ShoppingCart>;
+  async ngOnInit() {
+    this.cart$ = await this.shoppingCartService.getCart();
   }
+
+
+
+
 //  getHeight(){
  
 //    if(this.container){

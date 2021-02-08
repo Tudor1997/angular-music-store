@@ -37,7 +37,7 @@ export class CatalogComponent implements OnInit , OnDestroy{
   }
 
   async ngOnInit(): Promise<any> {
-   this.subscription =(await this.shoppingCartService.getCart()).valueChanges().subscribe(cart => this.cart = cart);
+   this.subscription =(await this.shoppingCartService.getCart()).subscribe(cart => this.cart = cart);
        
 }
 ngOnDestroy(): void {
