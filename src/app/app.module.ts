@@ -21,7 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PageNotFountComponent } from './components/page-not-fount/page-not-fount.component';
-import {ConfirmValidatorDirective} from './services/confirm-validator.directive'
+
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './components/navbar/search/search.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
@@ -42,7 +42,7 @@ import { CustomFormsModule } from 'ng2-validation';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { ProductFilterComponent } from './components/catalog/product-filter/product-filter.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
-import { ProductQuantityComponent } from './components/product-quantity/product-quantity.component';
+
 
 
 
@@ -58,7 +58,6 @@ import { ProductQuantityComponent } from './components/product-quantity/product-
     FooterComponent,
     NavbarComponent,
     PageNotFountComponent,
-    ConfirmValidatorDirective,
     SearchComponent,
     ProductDetailsComponent,
     RegisterComponent,
@@ -72,7 +71,7 @@ import { ProductQuantityComponent } from './components/product-quantity/product-
     CatalogComponent,
     ProductFilterComponent,
     ProductCardComponent,
-    ProductQuantityComponent,
+
     
  
    

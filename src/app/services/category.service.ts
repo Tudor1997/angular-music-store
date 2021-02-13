@@ -13,9 +13,5 @@ export class CategoryService {
       return ref.orderByChild('type');
     });
   }
-  getGuitars(){
-    return this.db.list('/guitars', ref => {
-      return ref.orderByChild('value');
-    });
-  }
+
 }

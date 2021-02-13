@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/products.interface';
 import { ProductService } from 'src/app/services/product.service';
 import { switchMap } from 'rxjs/operators';
-import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
+
 import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-catalog',
@@ -18,11 +18,11 @@ export class CatalogComponent implements OnInit , OnDestroy{
   subscription!:Subscription
   constructor(productService: ProductService, 
     route:ActivatedRoute,
-   private shoppingCartService: ShoppingCartService) { 
+ ) { 
     
    
 
-      productService.getAll().pipe(
+      productService.getAll().valueChanges().pipe(
         switchMap(products =>{
           this.products = products;
           return route.queryParamMap;
@@ -37,7 +37,7 @@ export class CatalogComponent implements OnInit , OnDestroy{
   }
 
   async ngOnInit(): Promise<any> {
-   this.subscription =(await this.shoppingCartService.getCart()).subscribe(cart => this.cart = cart);
+  
        
 }
 ngOnDestroy(): void {

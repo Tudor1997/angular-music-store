@@ -21,7 +21,7 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
   @ViewChild('container') container?: ElementRef;
   constructor(private productService: ProductService) {
     this.subscribe = this.productService
-      .getAll()
+      .getAll().valueChanges()
       .subscribe(
         (products) => (this.filteredProducts = this.products = products)
       );
