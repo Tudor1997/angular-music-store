@@ -1,1 +1,117 @@
-<p>check-out works!</p>
+<div class="container card">
+    <main>
+      <div class="py-5 text-center">
+        <h2>Checkout form</h2>
+      </div>
+  
+      <div class="row g-3">
+        <div class="col-md-5 col-lg-4 order-md-last">
+         
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Billing address</h4>
+          <form class="needs-validation" #f="ngForm" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" 
+                class="form-control" 
+                id="firstName"
+                name="firstName"
+                 placeholder="First name" 
+                 [(ngModel)]="shipping.firstName"
+                   #firstName="ngModel"   
+                  required>
+                  <div class="alert alert-danger" *ngIf="firstName.touched && firstName.invalid">
+                    <div *ngIf="firstName.errors.required">First Name is required.</div>
+                  </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                id="lastName" 
+                name="lastName"
+                placeholder="Last name"
+                [(ngModel)]="shipping.lastName"
+                #lastName="ngModel" 
+                 required>
+                <div class="alert alert-danger" *ngIf="lastName.touched && lastName.invalid">
+                    <div *ngIf="lastName.errors.required">Last Name is required.</div>
+                  </div>
+              </div>
+  
+            
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email"
+                 class="form-control"
+                  id="email" 
+                  placeholder="you@example.com"  >
+                  
+              </div>
+  
+              <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" 
+                [(ngModel)]="shipping.address"
+                #address="ngModel"
+                name="address"
+                class="form-control" 
+                id="address" placeholder="example: county, city, street, etc." 
+                required>
+                <div class="alert alert-danger" *ngIf="address.touched && address.invalid">
+                    <div *ngIf="address.errors.required">Address is required.</div>
+                  </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="...">
+              </div>
+  
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select 
+                [(ngModel)]="shipping.country"
+               #country="ngModel" 
+               name="country"
+                class="form-select" id="country" required>
+                  <option value="">Choose...</option>
+                  <option>Romania</option>
+                </select>
+                <div class="alert alert-danger" *ngIf="country.touched && country.invalid">
+                    <div *ngIf="country.errors.required">Please select a country</div>
+                  </div>
+              </div>
+  
+              
+  
+              <div class="col-md-4">
+                <label for="zip" class="form-label">Zip</label>
+                <input 
+                type="text" 
+                class="form-control"
+                 id="zip" 
+                 placeholder="" 
+                 [(ngModel)]="shipping.zip"
+                 #zip="ngModel"
+                 name="zip"
+                 required>
+                 <div class="alert alert-danger" *ngIf="zip.touched && zip.invalid">
+                    <div *ngIf="zip.errors.required">Please enter a valid zip code</div>
+                  </div>
+              </div>
+            </div>
+            <hr class="my-4">
+  
+            <button
+            (click)="placeOrder()" 
+            class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          </form>
+        </div>
+      </div>
+    </main>
