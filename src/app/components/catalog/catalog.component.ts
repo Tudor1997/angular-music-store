@@ -5,6 +5,7 @@ import { ProductService } from 'src/app/services/product.service';
 import { switchMap } from 'rxjs/operators';
 
 import { Subscription } from 'rxjs';
+import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
@@ -16,7 +17,10 @@ export class CatalogComponent implements OnInit, OnDestroy {
   cart: any;
   category!: string | null;
   subscription!: Subscription;
-  constructor(productService: ProductService, route: ActivatedRoute) {
+  constructor(productService: ProductService, 
+    route: ActivatedRoute,
+   private shoppingCartService: ShoppingCartService) {
+    
     this.subscription = productService
       .getAll()
       .pipe(
@@ -34,7 +38,10 @@ export class CatalogComponent implements OnInit, OnDestroy {
       });
   }
 
-  ngOnInit() {}
+  async ngOnInit() {
+   this.subscription = (await this.shoppingCartService.getCart()).valueChanges()
+   .subscribe(cart => this.cart = cart);
+  }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
