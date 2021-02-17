@@ -36,7 +36,7 @@ const routes: Routes = [
 
 
   { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuardService]},
-  { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuardService]},
+  { path: 'order-success/:id', component: OrderSuccessComponent, canActivate: [AuthGuardService]},
   { path: 'my-orders', component: MyOrdersComponent, canActivate: [AuthGuardService]},
   
 

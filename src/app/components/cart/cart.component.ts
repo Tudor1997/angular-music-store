@@ -27,7 +27,7 @@ cart$!: Observable<ShoppingCart>;
   getHeight(){
  
    if(this.container){
-  console.log(this.container.nativeElement.innerHTML.length);  
+  // console.log(this.container.nativeElement.innerHTML.length);  
 if(this.container.nativeElement.innerHTML.length === 420 ){
  this.container.nativeElement.classList.add('full');
   }else if( this.container.nativeElement.innerHTML.length <= 2500){
