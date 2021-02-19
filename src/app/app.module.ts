@@ -51,6 +51,8 @@ import { ShoppingCartSummaryComponent } from './components/check-out/shopping-ca
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +76,8 @@ import { ShoppingCartSummaryComponent } from './components/check-out/shopping-ca
     ProductFilterComponent,
     ProductCardComponent,
     ShoppingCartSummaryComponent,
+   
+
 
     
  

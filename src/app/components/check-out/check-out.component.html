@@ -111,6 +111,7 @@
                 ngModel
                  #zip="ngModel"
                  name="zip"
+                 (keypress)="onlyNumbersAllowed($event)"
                  required>
                  <div class="alert alert-danger" *ngIf="zip.touched && zip.invalid">
                     <div *ngIf="zip.errors.required">Please enter a valid zip code</div>

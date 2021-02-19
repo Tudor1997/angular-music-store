@@ -1,7 +1,9 @@
+import { Message } from './../../models/message';
 import { HttpClient } from '@angular/common/http';
 
 
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 
 
@@ -13,18 +15,12 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
 image:string = "../../assets/img/undraw_contact_us_15o2.svg"
-  constructor(private http: HttpClient) { 
+  constructor(private db:AngularFireDatabase) { 
 
   }
-  getMessage(){
-    return this.http.get('http://localhost:3000/messages');
-  }
-postMessage(message):any{
-  
-  return this.http.post('http://localhost:3000/messages', message).subscribe((result) =>{
-    console.log(result)
-  });
-  
+
+createMessage(message:Message){
+ return this.db.list('/contact').push(message)
 }
   ngOnInit(): void {
   }
