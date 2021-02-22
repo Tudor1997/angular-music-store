@@ -3,8 +3,33 @@
     box-shadow: 2px 5px 16px 0px #0B325E;
 }
 .navbar-collapse{
- text-align: center;
+ text-align: start;
+ padding-top:7px;
+}
+.navbar-toggler{
+    border:2px solid black;
+    border-radius: 4px;
+   
+}
+.navbar-toggler .collapsed{
+    border:none;
+}
+.fa-bars{
+    color:black;
 }
 a{
     cursor: pointer;
+    width:auto;
+}
+.color {
+    background-color:rgb(48, 46, 46);
+    color:white;
+}
+.nav-link{
+    color:white;
+}
+
+.active{
+    background-color:#4d7baf9f;
+    border-radius: 5px;
 }

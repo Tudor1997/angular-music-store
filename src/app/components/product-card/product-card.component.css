@@ -12,3 +12,11 @@ margin-top:20px;
 button{
     width:100%;
 }
+.star-container{
+    display:flex;
+    justify-content:center;
+    margin-bottom:5px;
+}
+.card-img-top{
+    padding:10px;
+}

@@ -1,5 +1,5 @@
 <div class="form-header">
-    <input #myInput type="text" placeholder="Search..." class="form-control" >
-
-    <button  class="btn btn-secondary">Submit</button>
+    <input name="search" type="text" #searchInput
+    placeholder="Search..." class="form-control" >
+ <button #searchButton (click)="searchByNav()"  class="btn btn-secondary">Submit</button>
 </div>

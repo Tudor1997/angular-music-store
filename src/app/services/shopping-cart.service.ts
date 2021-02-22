@@ -31,7 +31,7 @@ async clearCart(){
   }
   private create() {
     return this.db.list('/shopping-carts').push({
-      dateCreated: new Date().getTime(),
+      dateCreated: new Date().getTime()
     });
   }
 
@@ -51,9 +51,7 @@ async clearCart(){
     let item$: Observable<any> = this.db
       .object('/shopping-carts/' + cartId + '/items/' + product.key)
       .valueChanges();
-    let item$$ = this.db.object(
-      '/shopping-carts/' + cartId + '/items/' + product.key
-    );
+    let item$$ = this.db.object('/shopping-carts/' + cartId + '/items/' + product.key);
     item$.pipe(take(1)).subscribe((item:any) => {
       if (item === null) {
         item$$.set({ product: product, quantity: 1 });

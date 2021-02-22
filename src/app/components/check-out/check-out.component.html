@@ -46,7 +46,7 @@
             
   
               <div class="col-12">
-                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                <label for="email" class="form-label">Email </label>
                 <input type="email"
                  class="form-control"
                   id="email" 
@@ -54,8 +54,14 @@
                   ngModel
                   #email="ngModel"
                   name="email"
+                  email
+                  required
                   >
-                  
+                  <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+                    <div *ngIf="email.errors.required">Email is required.</div>
+                    <div *ngIf="email.invalid">Email is invalid.</div>
+                  </div>
+            
               </div>
   
               <div class="col-12">
@@ -95,7 +101,7 @@
                   <option>Romania</option>
                 </select>
                 <div class="alert alert-danger" *ngIf="country.touched && country.invalid">
-                    <div *ngIf="country.errors.required">Please select a country</div>
+                    <div *ngIf="country.errors.required">Please select a country.</div>
                   </div>
               </div>
   
@@ -114,7 +120,7 @@
                  (keypress)="onlyNumbersAllowed($event)"
                  required>
                  <div class="alert alert-danger" *ngIf="zip.touched && zip.invalid">
-                    <div *ngIf="zip.errors.required">Please enter a valid zip code</div>
+                    <div *ngIf="zip.errors.required">Please enter a valid zip code.</div>
                   </div>
               </div>
 
@@ -131,7 +137,7 @@
                  name="phoneNumber"
                  required>
                  <div class="alert alert-danger" *ngIf="phoneNumber.touched && phoneNumber.invalid">
-                    <div *ngIf="phoneNumber.errors.required">Please enter a valid phone number code</div>
+                    <div *ngIf="phoneNumber.errors.required">Please enter a valid phone number.</div>
                   </div>
               </div>
             </div>

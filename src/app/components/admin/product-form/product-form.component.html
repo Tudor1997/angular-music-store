@@ -1,8 +1,9 @@
-<div class="container animate__animated animate__backInLeft">
+<div class="container card animate__animated animate__backInLeft">
+    
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <form #f="ngForm" class="card" (ngSubmit)="save(f.value)">
-                <h2>Add Products</h2>
+                <h2 class="title">Add Products</h2>
                 <div class="form-group">
                     <label for="title">Title</label>
                     <input #title="ngModel" [(ngModel)]="product.title" name="title" id="title" type="text" class="form-control" required>

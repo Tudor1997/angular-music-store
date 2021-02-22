@@ -9,6 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 
+import { AngularFireModule } from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireAuthModule} from 'angularfire2/auth';
 
 
 import { FormsModule } from '@angular/forms';
@@ -24,10 +27,6 @@ import { PageNotFountComponent } from './components/page-not-fount/page-not-foun
 
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './components/navbar/search/search.component';
-import { ProductDetailsComponent } from './components/product-details/product-details.component';
-import { AngularFireModule } from 'angularfire2';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
-import { AngularFireAuthModule} from 'angularfire2/auth';
 import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './components/register/register.component';
 import { CheckOutComponent } from './components/check-out/check-out.component';
@@ -53,6 +52,7 @@ import { ShoppingCartSummaryComponent } from './components/check-out/shopping-ca
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +63,6 @@ import { ShoppingCartSummaryComponent } from './components/check-out/shopping-ca
     NavbarComponent,
     PageNotFountComponent,
     SearchComponent,
-    ProductDetailsComponent,
     RegisterComponent,
     CheckOutComponent,
     OrderSuccessComponent,
@@ -76,6 +75,7 @@ import { ShoppingCartSummaryComponent } from './components/check-out/shopping-ca
     ProductFilterComponent,
     ProductCardComponent,
     ShoppingCartSummaryComponent,
+ 
    
 
 

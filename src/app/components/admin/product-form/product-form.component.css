@@ -17,3 +17,10 @@
 .buttons button{
     margin:0px 5px;
 }
+.row{
+    width:100%;
+    padding:30px;
+}
+.title{
+    padding:10px;
+}
