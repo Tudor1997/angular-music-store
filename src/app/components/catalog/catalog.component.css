@@ -10,4 +10,18 @@
     display:flex;
     justify-content:space-between;
 }
+@media (max-width:770px){
+    .col-3{
+        width:30%;
+    }
+}
+@media (max-width:570px){
+    .col-3{
+        width:100%;
+    }
+    .products{
+        display:flex;
+        justify-content:center;
+    }
+}
 

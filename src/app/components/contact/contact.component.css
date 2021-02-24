@@ -20,9 +20,13 @@ img{
     justify-content: center;
     margin-left:10px;
 }
-.alertMessage{
-    text-align: center;
-    align-self: center;
-    background-color:white;
-    border:2px solid black;
+
+.alert{
+    text-align:center;
+    margin:10px 100px;
+}
+@media (max-width:600px){
+    .alert{
+        margin:0px;
+    }
 }

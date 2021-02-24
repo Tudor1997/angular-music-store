@@ -5,12 +5,12 @@
 .form-control{
     width:300px;
 }
-@media (max-width:991px){
+@media (max-width:1128px){
     .form-header{
         display:none;
     }
 }
-@media (max-width:1014px){
+@media (max-width:1220px){
     .form-control{
         width:auto;
     }

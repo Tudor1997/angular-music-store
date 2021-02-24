@@ -1,8 +1,11 @@
 <section class="head pb-5 animate__animated animate__backInLeft">
-   <!-- de terminat! -->
-  <span class="alertMessage ">
-    <p>Your message was send!</p>
-  </span>
+  
+   <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Your message has been sent!
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
  
   <div class="container py-5">
     <div class="card">
@@ -90,7 +93,7 @@
                         <div class="col-sm-offset-2 col-sm-10">
                           <button
                           [disabled]="!userPost.valid"
-                           type="submit" (click)="createMessage(userPost.value)"   class="btn btn-dark">Send Message</button>
+                           type="submit" (click)="createMessage(userPost.value); userPost.reset()"   class="btn btn-dark">Send Message</button>
                         </div>
                       </div>
                     </div>

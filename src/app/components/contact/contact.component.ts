@@ -2,7 +2,7 @@ import { Message } from './../../models/message';
 import { HttpClient } from '@angular/common/http';
 
 
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 
@@ -13,15 +13,21 @@ import { AngularFireDatabase } from 'angularfire2/database';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
+  alert:boolean = false;
 image:string = "../../assets/img/undraw_contact_us_15o2.svg"
   constructor(private db:AngularFireDatabase) { 
 
   }
 
 createMessage(message:Message){
+  this.alert = true;
+
  return this.db.list('/contact').push(message)
 }
+closeAlert(){
+  this.alert = false;
+}
+
   ngOnInit(): void {
   }
 
