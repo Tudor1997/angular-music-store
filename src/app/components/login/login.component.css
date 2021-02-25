@@ -10,7 +10,7 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color: rgba(0, 0, 0, 0.644) !important;
     }
     
     .social_icon span{
@@ -83,4 +83,10 @@
     
     .links a{
     margin-left: 4px;
+    }
+    .signUp{
+      color:rgb(255, 255, 255);
+    }
+    .signUp:hover{
+        color:blue;
     }
