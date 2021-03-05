@@ -27,6 +27,7 @@ a{
 }
 .nav-link{
     color:white;
+    padding: 6px;
 }
 
 .active{
