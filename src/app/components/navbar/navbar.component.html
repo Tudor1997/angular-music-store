@@ -34,7 +34,7 @@
               <li><a class="dropdown-item" routerLink="/my-orders" routerLinkActive="active">My Orders</a></li>
               <ng-container *ngIf="appUser.isAdmin">
                 <li><a class="dropdown-item" routerLink="/admin/products" routerLinkActive="active">Manage Products</a></li>
-                <li><a class="dropdown-item" routerLink="/admin/orders" routerLinkActive="active">Manage Orders</a></li>
+                <li><a class="dropdown-item" routerLink="/admin/orders" routerLinkActive="active">All Orders</a></li>
               </ng-container>
               <li><hr class="dropdown-divider" #navItem></li>
               <li><a class="dropdown-item" (click)="logout()">Log Out</a></li>

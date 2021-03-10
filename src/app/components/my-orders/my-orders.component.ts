@@ -31,7 +31,6 @@ export class MyOrdersComponent implements OnInit{
  
   setHeight() {
     if (this.container) {
-      // console.log(this.container.nativeElement.innerHTML.length);
       if (this.container.nativeElement.innerHTML.length > 420) {
         this.container.nativeElement.classList.add('full');
       }

@@ -55,13 +55,12 @@ async clearCart(){
     item$.pipe(take(1)).subscribe((item:any) => {
       if (item === null) {
         item$$.set({ product: product, quantity: 1 });
-        console.log('adding new product to cart');
       } else {
         item$$.update({ quantity: (item.quantity || 0) + change });
-        console.log('updating existing product ');
+        let quantity = (item.quantity || 0) + change;
+        if(quantity === 0) item$$.remove();
       }
-      let quantity = (item.quantity || 0) + change;
-      if(quantity === 0) item$$.remove();
+    
     
     });
   }

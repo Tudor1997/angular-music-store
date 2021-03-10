@@ -21,7 +21,6 @@ export class AppComponent {
       userService.save(user);
 
       let returnUrl = localStorage.getItem('returnUrl')!;
-      console.log(returnUrl);
       router.navigateByUrl(returnUrl);
       }
     })
