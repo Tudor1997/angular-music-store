@@ -1,9 +1,13 @@
 .full{
-    height: 100vw;
-    margin-bottom:250px;
+    height: 100%;
+    margin-bottom:30px;
 }
-
 .newProduct{
     margin-top:20px;
 }
-
+@media (max-width: 1240px){
+  .full{
+    height: 100%;
+    margin-bottom:20px;
+}
+}

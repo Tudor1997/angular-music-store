@@ -4,12 +4,13 @@
 }
 .row{
     display:flex;
-   
+
 }
 .col-md-4{
     display:flex;
     justify-content:space-between;
 }
+
 @media (max-width:770px){
     .col-3{
         width:30%;
@@ -22,6 +23,7 @@
     .products{
         display:flex;
         justify-content:center;
+
     }
 }
 

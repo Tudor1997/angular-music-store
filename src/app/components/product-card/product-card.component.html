@@ -1,16 +1,16 @@
 <div *ngIf="product.title" class="card" style="width: 20rem;">
-  <img  *ngIf="product.imageUrl" src="{{product.imageUrl}}"  class="card-img-top" alt="{{ product.title }}">
+  <img  *ngIf="product.imageUrl" src="{{product.imageUrl}}"  class="card-img-top mx-auto d-block"  alt="{{ product.title }}">
   <div class="card-body">
     <h5 class="card-title">{{product.title}}</h5>
     <h6 class="card-title">{{product.category}}</h6>
-    <p class="card-text">{{product.price | currency:"&euro;":true}}</p>
- 
+    <p class="card-text">{{product.price | currency:"EUR"}}</p>
+
   </div>
 
   <div class="card-footer"
   *ngIf="showActions"
   >
-    <button 
+    <button
      class="btn btn-dark"
      *ngIf="getQuantity() === 0; else updateQuantity"
      (click)="addToCart()"

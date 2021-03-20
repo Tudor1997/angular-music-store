@@ -22,7 +22,7 @@
             {{ item.quantity }} in cart
           </td>
           <td>
-            {{ item.totalPrice | currency:'&euro;':true}}
+            {{ item.totalPrice | currency:"EUR"}}
           </td>
 
         </tr>
@@ -31,7 +31,7 @@
         <tr>
           <th></th>
           <th></th>
-          <th>{{ cart.totalPrice | currency:'&euro;':true}}</th>
+          <th>{{ cart.totalPrice | currency:"EUR"}}</th>
         </tr>
 
       </tfoot>

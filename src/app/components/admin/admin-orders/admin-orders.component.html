@@ -1,5 +1,6 @@
-<div class="container card animate__animated animate__backInLeft" #container [class]="setHeight()">
+<div class="container  animate__animated animate__backInLeft" #container [class]="setHeight()">
 <h1>Orders</h1>
+<div class="card">
 <table class="table ">
   <thead>
     <tr>
@@ -7,14 +8,15 @@
       <th></th>
       <th>Date</th>
     </tr>
-  </thead> 
+  </thead>
   <tbody>
     <tr *ngFor="let order of orders$">
       <td>{{order.shipping.firstName}} {{ order.shipping.lastName }}</td>
       <td></td>
       <td>{{ order.datePlaced | date}}</td>
-    
+
     </tr>
-  </tbody> 
+  </tbody>
 </table>
+</div>
 </div>
