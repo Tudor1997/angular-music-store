@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ShoppingCart } from 'src/app/models/shopping-cart';
@@ -12,8 +12,8 @@ import { ShoppingCartService } from 'src/app/services/shopping-cart.service';
   styleUrls: ['./check-out.component.css']
 })
 export class CheckOutComponent implements OnInit, OnDestroy {
-  
-  cart!: ShoppingCart;
+
+ cart!: ShoppingCart;
   cartSubscription!: Subscription;
   userSubscription!: Subscription;
   userId!:string | undefined;
@@ -28,7 +28,7 @@ export class CheckOutComponent implements OnInit, OnDestroy {
  this.userSubscription = this.authService.user$.subscribe(user => this.userId = user?.uid);
   }
  async placeOrder(shipping){
-    
+
     let order = {
       datePlaced: new Date().getTime(),
       shipping: shipping,

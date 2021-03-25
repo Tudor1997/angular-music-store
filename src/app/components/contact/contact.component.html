@@ -1,57 +1,57 @@
 <section class="head pb-5 animate__animated animate__backInLeft">
-  
+
    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>Success!</strong> Your message has been sent!
     <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
       <i class="fa fa-times" aria-hidden="true"></i>
     </button>
   </div>
- 
+
   <div class="container py-5">
     <div class="card">
       <div class="card-body bg-light">
         <h1 class="font-weight-light text-center py-3">Contact Us <i class="fa fa-comment" aria-hidden="true"></i></h1>
         <div class="row">
-          
+
           <div class="col-lg-6">
             <form class="form-horizontal"  #contact="ngForm">
-                
+
               <div class="form-group">
-                <form class="form-inline" 
+                <form class="form-inline"
                  #userPost="ngForm">
                     <div class="form-group">
                       <label for="firstName">First Name</label>
                       <div class="col-sm-10">
-                        <input 
-                        type="text" 
-                        class="form-control" 
-                        id="firstName" 
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
                         (ngModel)="firstName"
                         #firstName="ngModel"
                         ngModel
-                         name="firstName"  
+                         name="firstName"
                         placeholder="First Name"
                         required >
                         <div class="alert alert-danger" *ngIf="firstName.touched && firstName.invalid">
-                          <div *ngIf="firstName.errors.required">First Name is required.</div>
+                          <div *ngIf="firstName.errors!.required">First Name is required.</div>
                         </div>
                       </div>
-                    
+
                     </div>
                     <div class="form-group">
                       <label for="lastName">Last Name</label>
                       <div class="col-sm-10">
-                        <input type="text" 
-                        class="form-control" 
-                        id="lastName" 
-                        (ngModel)="lastName" 
+                        <input type="text"
+                        class="form-control"
+                        id="lastName"
+                        (ngModel)="lastName"
                         ngModel
-                        name="lastName" 
+                        name="lastName"
                         #lastName="ngModel"
-                        placeholder="Last Name" 
+                        placeholder="Last Name"
                         required>
                         <div class="alert alert-danger" *ngIf="lastName.touched && lastName.invalid">
-                          <div *ngIf="lastName.errors.required">Last Name is required.</div>
+                          <div *ngIf="lastName.errors!.required">Last Name is required.</div>
                         </div>
                       </div>
                       <label for="email" class="col-sm-2 control-label">Email</label>
@@ -64,28 +64,28 @@
                            #email="ngModel"
                            name="email"
                            email
-                            placeholder="Email" 
+                            placeholder="Email"
                             required>
                             <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
-                              <div *ngIf="email.errors.required">Email is required.</div>
+                              <div *ngIf="email.errors!.required">Email is required.</div>
                               <div *ngIf="email.invalid">Email is invalid.</div>
                             </div>
                       </div>
                       <div class="form-group">
                         <label for="textarea" class="col-sm-2 control-label">Message</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" 
-                            id="textarea" 
-                            name="message" 
+                            <textarea class="form-control"
+                            id="textarea"
+                            name="message"
                             #message="ngModel"
                             (ngModel)='message'
                             ngModel
-                            placeholder="Message" 
-                            rows="3" 
+                            placeholder="Message"
+                            rows="3"
                             required></textarea>
                             <div class="alert alert-danger" *ngIf="message.touched && message.invalid">
-                              <div *ngIf="message.errors.required">A message is required.</div>
-                            
+                              <div *ngIf="message.errors!.required">A message is required.</div>
+
                             </div>
                         </div>
                       </div>

@@ -1,21 +1,48 @@
 <div class="container animate__animated animate__backInLeft">
-<div id="login-box">
-    <form #formData='ngForm' (ngSubmit)="onSubmit(email.value, password.value)" class="left">
+<div class="container-fluid" id="login-box">
+
+    <form #formData='ngForm' (ngSubmit)="onSubmit(email.value, password.value)" class="col-md-6 left">
       <h1>Sign up</h1>
-      
-      <input type="text" #email (ngModel)='email' name="email" placeholder="E-mail" required/>
-      <input type="password" #password name="password" (ngModel)='password' placeholder="Password" required/>
-      
-      
+<div class="col">
+  <input
+  type="text"
+  #email=ngModel
+  (ngModel)='email'
+  name="email"
+  placeholder="E-mail" required/>
+  <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+    <div *ngIf="email.errors!.required">Email is required.</div>
+    <div *ngIf="email.invalid">Email is invalid.</div>
+  </div>
+</div>
+<div class="col">
+  <input type="password"
+   #password=ngModel
+   name="password"
+   (ngModel)='password'
+   placeholder="Password"
+   required/>
+   <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+    <div *ngIf="password.errors!.required">Password is required.</div>
+  </div>
+</div>
+
+
+
       <input type="submit" name="signup_submit" value="Sign me up" />
+
     </form>
-  
-    <div class="right">
-      <span class="loginwith">Sign in with<br />social network</span>
-      
-      <!-- <button class="social-signin facebook">Log in with facebook</button> -->
+
+    <div class="col-md-6 right">
+
       <button class="social-signin google"(click)="login()">Log in with Google</button>
+      <div class="d-flex justify-content-center links">
+        Already have an account?
+      </div>
+      <a routerLink="/login" class="signUp d-flex justify-content-center bg-secondary"> <strong>Log in</strong></a>
     </div>
     <div class="or">OR</div>
+
   </div>
+
 </div>

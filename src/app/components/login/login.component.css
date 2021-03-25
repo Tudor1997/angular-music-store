@@ -2,11 +2,11 @@
     height: 100%;
     align-content: center;
     margin-top:60px;
-    margin-bottom:13rem;
+    margin-bottom:15.55rem;
     }
 
     .card{
-    height: 370px;
+
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
@@ -16,6 +16,7 @@
     .social_icon span{
     font-size: 60px;
     margin-left: 10px;
+
 
     }
     .googleIcn{
@@ -36,7 +37,8 @@
     .social_icon{
     position: absolute;
     right: 20px;
-    top: -45px;
+    top: -102px;
+
     }
 
     .input-group-prepend span{
@@ -65,10 +67,12 @@
     margin-left: 15px;
     margin-right: 5px;
     }
-
+.card-body{
+  z-index: 1;
+}
     .login_btn{
     color: white;
-
+    z-index:1;
     width: 100px;
     }
 
@@ -86,7 +90,12 @@
     }
     .signUp{
       color:rgb(255, 255, 255);
+      z-index:1;
     }
     .signUp:hover{
         color:#4d7baf9f;
+
     }
+.alert{
+  text-align: center;
+}

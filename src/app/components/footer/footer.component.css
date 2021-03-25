@@ -1,14 +1,14 @@
 .navbar{
-   
+
     width: 100%;
-  
+
     box-shadow: -2px -19px 22px -11px rgba(0,0,0,0.79);
 }
 .container {
     position:relative;
     bottom:0;
     width:100%;
-    
+
 }
 .row{
     display:flex;
@@ -59,6 +59,10 @@ color:#833ab4;
     color: #2867B2;
 }
 @media screen and (max-width:720px){
+  .row{
+    display:flex;
+    flex-direction: column;
+  }
     .col-lg{
         width: auto;
         text-align: center;

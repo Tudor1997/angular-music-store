@@ -4,11 +4,11 @@
   margin-bottom:10.1rem;
 }
 
-#login-box {
+.container-fluid {
   position: relative;
   margin: 5% auto;
   width: 600px;
-  height: 420px;
+  height:485px;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -98,7 +98,7 @@ input[type="submit"]:active {
 
 .right {
   position: absolute;
-  top: 0;
+  top: 100px;
   right: 0;
   box-sizing: border-box;
   padding: 40px;
@@ -108,7 +108,7 @@ input[type="submit"]:active {
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;
-  margin-top:20px;
+
 }
 
 .right .loginwith {
@@ -143,14 +143,59 @@ button.social-signin:active {
   transition: 0.2s ease;
 }
 
-button.social-signin.facebook {
-  background: #32508E;
-}
-
-button.social-signin.twitter {
-  background: #55ACEE;
-}
 
 button.social-signin.google {
   background: #DD4B39;
+}
+.links{
+  padding-top:20px;
+}
+.signUp{
+  color:black;
+  text-decoration: none;
+  border-radius: 5px;
+  width:50%;
+  margin-left:20%;
+  margin-top:5px;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 40%);
+  transition: 0.2s ease;
+}
+.signUp:hover{
+  color:whitesmoke;
+
+}
+.container-fluid{
+  display:flex;
+
+}
+
+@media (max-width:770px){
+  .container-fluid{
+    flex-direction: column;
+    height:100%;
+    width:400px;
+  }
+  .right{
+    position: relative;
+    height:40%;
+    width:auto;
+    top:0;
+    margin-top:20px;
+  }
+  .or{
+    position:relative;
+    height:20%;
+   top:-228px;
+    left:41%;
+  }
+  .left{
+    position: relative;
+    height:40%;
+    margin-top:0;
+    margin-bottom:20px;
+  }
+  button.social-signin{
+    margin-bottom:0px;
+    margin-left:10%;
+  }
 }
