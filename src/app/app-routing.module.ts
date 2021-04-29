@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'cart', component: CartComponent},
   { path: 'catalog', component: CatalogComponent},
- 
+
   { path: 'contact', component: ContactComponent},
   { path: 'login', component: LoginComponent},
 
@@ -39,14 +39,14 @@ const routes: Routes = [
   { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuardService]},
   { path: 'order-success/:id', component: OrderSuccessComponent, canActivate: [AuthGuardService]},
   { path: 'my-orders', component: MyOrdersComponent, canActivate: [AuthGuardService]},
-  
 
-  
+
+
   { path: 'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
   { path: 'admin/products/:id', component: ProductFormComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
   { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService, AdminAuthGuardService]},
   { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService,AdminAuthGuardService]},
-  
+
 
 
   { path: '**', component: PageNotFountComponent}
