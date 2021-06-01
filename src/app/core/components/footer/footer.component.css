@@ -58,6 +58,9 @@ color:#833ab4;
 .linkedIn:hover{
     color: #2867B2;
 }
+.myWebsite:hover{
+  color:skyblue;
+}
 @media screen and (max-width:720px){
   .row{
     display:flex;
