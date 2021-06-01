@@ -1,0 +1,23 @@
+.card{
+    margin:10px;
+}
+img{
+    width: 100%;
+margin-top:20px;
+}
+.card-footer{
+    padding:0;
+}
+button{
+    width:100%;
+}
+.star-container{
+    display:flex;
+    justify-content:center;
+    margin-bottom:5px;
+}
+.card-img-top{
+    padding:10px;
+    object-fit:contain;
+
+}

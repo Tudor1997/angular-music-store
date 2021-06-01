@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -21,15 +21,20 @@
       "dom"
     ],
     "noImplicitAny": false,
-    
+    "paths": {
+      "shared/*": [
+        "app/shared/*"
+      ]
+    }
+
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
-    "strictNullChecks":false, 
-   
+    "strictNullChecks":false,
+
 
   }
- 
+
 }

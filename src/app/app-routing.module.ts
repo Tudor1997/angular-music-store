@@ -1,23 +1,23 @@
-import { AdminAuthGuardService } from './services/admin-auth-guard.service';
-import { OrderSuccessComponent } from './components/order-success/order-success.component';
-import { RegisterComponent } from './components/register/register.component';
-import { PageNotFountComponent } from './components/page-not-fount/page-not-fount.component';
+import { AdminAuthGuardService } from './admin/services/admin-auth-guard.service';
+import { OrderSuccessComponent } from './shopping/components/order-success/order-success.component';
+import { RegisterComponent } from './core/components/register/register.component';
+import { PageNotFountComponent } from './core/components/page-not-fount/page-not-fount.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CartComponent } from './components/cart/cart.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { MainContentComponent } from './components/main-content/main-content.component';
+import { CartComponent } from './shopping/components/cart/cart.component';
+import { ContactComponent } from './core/components/contact/contact.component';
+import { MainContentComponent } from './core/components/main-content/main-content.component';
 
 
 
-import { CheckOutComponent } from './components/check-out/check-out.component';
-import { LoginComponent } from './components/login/login.component';
-import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
-import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
-import { MyOrdersComponent } from './components/my-orders/my-orders.component';
-import { AuthGuardService } from './services/auth-guard.service';
-import { ProductFormComponent } from './components/admin/product-form/product-form.component';
-import { CatalogComponent } from './components/catalog/catalog.component';
+import { CheckOutComponent } from './shopping/components/check-out/check-out.component';
+import { LoginComponent } from './core/components/login/login.component';
+import { AdminProductsComponent } from './admin/components/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './admin/components/admin-orders/admin-orders.component';
+import { MyOrdersComponent } from './shopping/components/my-orders/my-orders.component';
+import { AuthGuardService } from 'shared/services/auth-guard.service';
+import { ProductFormComponent } from './admin/components/product-form/product-form.component';
+import { CatalogComponent } from './shopping/components/catalog/catalog.component';
 
 
 
