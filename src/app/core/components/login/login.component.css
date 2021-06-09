@@ -1,8 +1,10 @@
 .container{
     height: 100%;
+    display:flex;
     align-content: center;
+justify-content: center;
     margin-top:60px;
-    margin-bottom:15.55rem;
+    margin-bottom:17.55rem;
     }
 
     .card{
@@ -98,4 +100,9 @@
     }
 .alert{
   text-align: center;
+}
+@media (max-width:770px){
+  .card{
+    width:100%;
+  }
 }

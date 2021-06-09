@@ -6,6 +6,8 @@
 
 .container-fluid {
   position: relative;
+  display:flex;
+  flex-direction: row;
   margin: 5% auto;
   width: 600px;
   height:485px;
@@ -19,11 +21,16 @@
   position: absolute;
   top: 0;
   left: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
   box-sizing: border-box;
   padding: 40px;
-  width: 300px;
+
   height: 400px;
   margin-top:50px;
+
 }
 
 h1 {
@@ -99,10 +106,14 @@ input[type="submit"]:active {
 .right {
   position: absolute;
   top: 100px;
+  display:flex;
+
+
+  flex-direction: column;
   right: 0;
   box-sizing: border-box;
   padding: 40px;
-  width: 300px;
+  width: 50%;
   height: 400px;
   background: url('https://goo.gl/YbktSj');
   background-size: cover;
@@ -155,7 +166,7 @@ button.social-signin.google {
   text-decoration: none;
   border-radius: 5px;
   width:50%;
-  margin-left:20%;
+  align-self:center;
   margin-top:5px;
   box-shadow: 0 4px 4px rgb(0 0 0 / 40%);
   transition: 0.2s ease;
@@ -173,29 +184,42 @@ button.social-signin.google {
   .container-fluid{
     flex-direction: column;
     height:100%;
-    width:400px;
+    width:100%;
   }
   .right{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
     position: relative;
     height:40%;
     width:auto;
     top:0;
     margin-top:20px;
   }
-  .or{
-    position:relative;
-    height:20%;
-   top:-228px;
-    left:41%;
-  }
+.or{
+  position: absolute;
+  top: 53%;
+  left: 45%;
+  width: 40px;
+  height: 40px;
+  background: #DDD;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+  line-height: 40px;
+  text-align: center;
+}
   .left{
     position: relative;
     height:40%;
     margin-top:0;
     margin-bottom:20px;
   }
-  button.social-signin{
-    margin-bottom:0px;
-    margin-left:10%;
+
+}
+
+@media (min-height:1366px){
+  .container{
+    height: 60vh;
   }
 }

@@ -15,13 +15,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class ContactComponent implements OnInit {
   alert:boolean = false;
 image:string = "../../assets/img/undraw_contact_us_15o2.svg"
-  constructor(private db:AngularFireDatabase) { 
+  constructor(private db:AngularFireDatabase) {
 
   }
 
 createMessage(message:Message){
   this.alert = true;
-
  return this.db.list('/contact').push(message)
 }
 closeAlert(){
