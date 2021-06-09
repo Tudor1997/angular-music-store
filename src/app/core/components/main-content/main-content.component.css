@@ -19,7 +19,7 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
 .logo{
     align-self:center;
@@ -29,11 +29,31 @@
     padding-bottom:10px;
     color:white;
 }
+.carousel-item {
+width:100%;
+}
+.image{
+object-fit: fill;
+width:100%;
+}
+@media (max-width:500px){
+
+  .carousel-inner{
+    height:250px;
+  }
+  .carousel-item{
+    height:  100%;
+  }
+  .image{
+    object-fit:fill;
+    height:100%;
+  }
+}
 @media ( max-width:1040px){
     .container-fluid{
         margin-bottom:11.45rem;
     }
-   
+
 }
 
 @media (min-width:976px){
@@ -47,12 +67,22 @@
         width: 90%;
         left:6%;
         right:5%;
-      
+
     }
 }
 @media (min-width:1024px){
     .container-fluid{
-       
+
         margin-bottom:17rem;
     }
+}
+@media (min-height: 1366px){
+  .container-fluid{
+    margin-bottom:121px;
+    height:80vw;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+  }
 }

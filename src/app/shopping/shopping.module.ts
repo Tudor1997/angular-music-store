@@ -7,9 +7,10 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { OrderSuccessComponent } from './components/order-success/order-success.component';
 import { ProductFilterComponent } from './components/product-filter/product-filter.component';
 import { ShoppingCartSummaryComponent } from './components/shopping-cart-summary/shopping-cart-summary.component';
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from 'app/app-routing.module';
+
 import { SharedModule } from '../shared/shared.module';
+
+
 
 
 
@@ -22,9 +23,11 @@ import { SharedModule } from '../shared/shared.module';
     ShoppingCartSummaryComponent,
     MyOrdersComponent,
     OrderSuccessComponent,
+
   ],
   imports: [
-    SharedModule
+    SharedModule,
+
   ]
 })
 export class ShoppingModule { }

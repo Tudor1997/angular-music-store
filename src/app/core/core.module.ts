@@ -15,6 +15,7 @@ import { AppRoutingModule } from 'app/app-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
     MainContentComponent,
@@ -25,6 +26,7 @@ import { AppRoutingModule } from 'app/app-routing.module';
     SearchComponent,
     RegisterComponent,
     LoginComponent,
+
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { AppRoutingModule } from 'app/app-routing.module';
   ],
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+
   ]
 })
 export class CoreModule { }

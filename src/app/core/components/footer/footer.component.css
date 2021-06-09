@@ -1,20 +1,18 @@
-.navbar{
+.footer{
 
     width: 100%;
 
     box-shadow: -2px -19px 22px -11px rgba(0,0,0,0.79);
 }
 .container {
-    position:relative;
-    bottom:0;
-    width:100%;
-
+  display:flex;
+  justify-content:space-evenly;
 }
-.row{
-    display:flex;
-    flex-direction: row;
-    width:100%;
-    justify-content: center;
+.contact, .socials{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
 }
 .color {
     background-color:rgb(48, 46, 46);
@@ -23,14 +21,6 @@
 a{
     font-size: 14px;
     color:white;
-}
-.col-lg{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-   width:50%;
-   padding:0px 250px;
 }
 .navbar-text{
     color:white;
@@ -62,19 +52,9 @@ color:#833ab4;
   color:skyblue;
 }
 @media screen and (max-width:720px){
-  .row{
+  .container{
     display:flex;
     flex-direction: column;
   }
-    .col-lg{
-        width: auto;
-        text-align: center;
-        padding:0;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-    .col-lg a{
-        margin-left:auto 50%;
-    }
+
 }

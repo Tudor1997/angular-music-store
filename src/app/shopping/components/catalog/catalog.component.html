@@ -1,17 +1,16 @@
-<div class="container">
+<div class="container-spinner" *ngIf="!isLoading">
+  <app-spinner></app-spinner>
+</div>
+
+<div class="container" *ngIf="isLoading">
   <div class="row">
     <div class="col-3">
     <app-product-filter [category]="category"></app-product-filter>
     </div>
-    <div class="col animate__animated animate__backInLeft">
-      <div class="row">
-        <ng-container *ngFor="let product of filteredProducts; let i = index">
-          <div class="col products animate__animated animate__backInRight">
+    <div class="col products animate__animated animate__backInLeft">
+        <ng-container *ngFor="let product of filteredProducts; ">
             <app-product-card [product]="product" [shopping-cart]="cart"></app-product-card>
-          </div>
-          <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
         </ng-container>
       </div>
-    </div>
   </div>
   </div>

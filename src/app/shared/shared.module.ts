@@ -8,12 +8,15 @@ import { AppRoutingModule } from 'app/app-routing.module';
 import { CustomFormsModule } from 'ng2-validation';
 import { ProductCardComponent } from 'shared/components/product-card/product-card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+
 
 
 
 @NgModule({
   declarations: [
     ProductCardComponent,
+    SpinnerComponent
   ],
   exports:[
     ProductCardComponent,
@@ -25,6 +28,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     NgbModule,
+    SpinnerComponent
+
   ],
   imports: [
     CommonModule,

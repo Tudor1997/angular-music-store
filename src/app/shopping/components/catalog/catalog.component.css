@@ -10,7 +10,18 @@
     display:flex;
     justify-content:space-between;
 }
-
+.products {
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container-spinner{
+  height:75vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 @media (max-width:770px){
     .col-3{
         width:30%;
@@ -23,7 +34,15 @@
     .products{
         display:flex;
         justify-content:center;
+        width: 100%;
 
     }
 }
 
+@media (min-height:1366px){
+  .products {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+  }
+}

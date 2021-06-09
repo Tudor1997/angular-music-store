@@ -43,3 +43,10 @@ img{
         margin:0px;
     }
 }
+@media (min-height: 1366px){
+  .head{
+    height:90vw;
+    margin-bottom:20px;
+  }
+
+}

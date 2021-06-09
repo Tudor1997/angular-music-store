@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./main-content.component.css']
 })
 export class MainContentComponent implements OnInit {
-myLogo: string = "../../assets/img/logo.jpg"
+myLogo: string = "../../assets/img/logo.jpg";
   constructor() { }
 
   ngOnInit(): void {

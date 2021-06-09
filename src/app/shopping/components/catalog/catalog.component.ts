@@ -17,6 +17,7 @@ import { ShoppingCartService } from 'shared/services/shopping-cart.service';
 export class CatalogComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   filteredProducts: Product[] = [];
+  isLoading: boolean = false;
   cart: any;
   category!: string | null;
   subscription!: Subscription;
@@ -43,7 +44,11 @@ export class CatalogComponent implements OnInit, OnDestroy {
 
   async ngOnInit() {
    this.subscription = (await this.shoppingCartService.getCart())
-   .subscribe(cart => this.cart = cart);
+   .subscribe(cart =>{
+     this.cart = cart;
+     this.isLoading = true;
+    });
+    this.isLoading = false;
   }
 
   ngOnDestroy(): void {
