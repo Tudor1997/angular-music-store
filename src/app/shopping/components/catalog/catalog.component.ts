@@ -1,10 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 import { switchMap } from 'rxjs/operators';
-
 import { Subscription } from 'rxjs';
-
 import { Product } from 'shared/models/products.interface';
 import { ProductService } from 'shared/services/product.service';
 import { ShoppingCartService } from 'shared/services/shopping-cart.service';
@@ -17,10 +14,11 @@ import { ShoppingCartService } from 'shared/services/shopping-cart.service';
 export class CatalogComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   filteredProducts: Product[] = [];
-  isLoading: boolean = false;
+  isLoading: boolean = true;
   cart: any;
   category!: string | null;
   subscription!: Subscription;
+  cartSubscription!: Subscription;
   constructor(productService: ProductService,
     route: ActivatedRoute,
    private shoppingCartService: ShoppingCartService) {
@@ -30,6 +28,7 @@ export class CatalogComponent implements OnInit, OnDestroy {
       .pipe(
         switchMap((products:any) => {
           this.products = products;
+          this.isLoading = false;
           return route.queryParamMap;
         })
       )
@@ -43,15 +42,14 @@ export class CatalogComponent implements OnInit, OnDestroy {
   }
 
   async ngOnInit() {
-   this.subscription = (await this.shoppingCartService.getCart())
+   this.cartSubscription = (await this.shoppingCartService.getCart())
    .subscribe(cart =>{
      this.cart = cart;
-     this.isLoading = true;
     });
-    this.isLoading = false;
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+    this.cartSubscription.unsubscribe();
   }
 }

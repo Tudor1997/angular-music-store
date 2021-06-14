@@ -1,8 +1,8 @@
-<div class="container-spinner" *ngIf="!isLoading">
+<div class="container-spinner" *ngIf="isLoading">
   <app-spinner></app-spinner>
 </div>
 
-<div class="container" *ngIf="isLoading">
+<div class="container" *ngIf="!isLoading">
   <div class="row">
     <div class="col-3">
     <app-product-filter [category]="category"></app-product-filter>
